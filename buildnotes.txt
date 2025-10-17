@@ -5,3 +5,4 @@ talked to cursor and generated "my-app"
 it generated good code but can't add effect to stable website
 here's the chat : https://drive.google.com/file/d/178IemOOB9bH2_SXdmoWeyo4IbBd3mREE/view?usp=sharing
 
+2025-10-17: Scaffolded myportfolio Home page and planned structure (projects, resources, about, gaming, images, script.js).
