@@ -1,3 +1,7 @@
 total failure experience with chat gpt, had to revert code
 https://chatgpt.com/share/68f127d7-298c-8011-979e-f40b20b6cd29 
 https://chatgpt.com/share/68f127c0-cf20-8011-955e-cee177b8c46e
+talked to cursor and generated "my-app"
+it generated good code but can't add effect to stable website
+here's the chat : https://drive.google.com/file/d/178IemOOB9bH2_SXdmoWeyo4IbBd3mREE/view?usp=sharing
+
