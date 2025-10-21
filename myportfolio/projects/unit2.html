@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Unit 2 — Project</h1>
+    <h1>Unit 2 - Introduction to Web Development</h1>
     <nav>
       <a href="../index.html">Home</a> |
       <a href="index.html">My Projects</a> |
@@ -18,9 +18,47 @@
       <a href="https://github.com/rongfeng1203">Github</a>
     </nav>
   </header>
-
   <main>
-    <p>Stub page. Content coming soon.</p>
+    <figure>
+      <img src="../images/unit1-screenshot.png" alt="Screenshot of the Unit 1 JavaScript quiz interface">
+      <figcaption>Unit 1 Quiz UI (placeholder screenshot)</figcaption>
+    </figure>
+
+    <section>
+      <h2>Overview</h2>
+      <p>I built a simple quiz using HTML, CSS, and JavaScript. The goal was to practice DOM manipulation, event handling, and basic state management.</p>
+      <h3>Design Choices</h3>
+      <ul>
+        <li>Clear layout with one question at a time.</li>
+        <li>Accessible buttons and keyboard navigation.</li>
+        <li>Score displayed at the end with an option to retry.</li>
+      </ul>
+      <h3>What I Learned</h3>
+      <ul>
+        <li>How to listen for click events and update the DOM.</li>
+        <li>Structuring data for quiz questions and answers.</li>
+        <li>Basic styling and responsive images.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Code Snippet</h2>      
+      <a href="https://github.com/ICS3U-2025-26/website-portfolio-rongfeng1203">GitHub Repository</a>
+      <pre><code>// Example: rendering a question
+const currentQuestion = questions[currentIndex];
+questionEl.textContent = currentQuestion.prompt;
+choicesEl.innerHTML = '';
+currentQuestion.choices.forEach((choice, idx) => {
+  const button = document.createElement('button');
+  button.textContent = choice;
+  button.addEventListener('click', () => selectAnswer(idx));
+  choicesEl.appendChild(button);
+  https://github.com/ICS3U-2025-26/website-portfolio-rongfeng1203
+});
+</code></pre>
+    </section>
+
+    <p>Back to <a href="index.html">projects</a> or play it in the <a href="../gaming.html">Gaming Corner</a> when available.</p>
   </main>
 
   <script src="../script.js"></script>
