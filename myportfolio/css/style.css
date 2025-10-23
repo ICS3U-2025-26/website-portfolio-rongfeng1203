@@ -1,6 +1,7 @@
 /* Basic minimal styling for readability, Cursor generated this */
 :root { color-scheme: light dark; }
-body { background-color: rgb(238, 255, 251);
+body { background-color: rgb(39, 47, 101);
+  color: rgb(135, 255, 43);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0 1rem; line-height: 1.6; }
 header { padding: 1rem 0; border-bottom: 1px solid #d4d1d1; }
 nav a { margin-right: .5rem; }
@@ -19,3 +20,44 @@ a:link {
 a:visited {
     color: rgb(255, 0, 179); /* Sets the visited link color to purple */
   }
+
+/* Photo Gallery Styles */
+.photo-gallery {
+  margin: 2rem 0;
+}
+
+.photo-gallery h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(135, 255, 43);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.gallery-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(135, 255, 43, 0.3);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0;
+  display: block;
+}

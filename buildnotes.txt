@@ -9,3 +9,4 @@ cursor also helped me with the new pages, https://drive.google.com/file/d/1NNXKJ
 
 
 2025-10-17: Scaffolded myportfolio Home page and planned structure (projects, resources, about, gaming, images, script.js).
+cursor helped with photo gallery https://drive.google.com/file/d/1b5tOqkZebUW0SZR0Q46hS-Qqferznlcu/view?usp=sharing 
