@@ -12,14 +12,27 @@ th, td { border: 1px solid #000000; padding: .5rem; text-align: left; }
 pre { background: rgb(0, 0, 0); padding: .75rem; overflow: auto; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
 
-<!--googled code for link colors-->
+/* googled code for link colors */
 a:link {
-    color: rgb(0, 213, 255); /* Sets the link color to green */
-  }
+  color: rgb(0, 255, 251);
+  background-color: transparent;
+  text-decoration: none;
+}
 
 a:visited {
-    color: rgb(255, 0, 179); /* Sets the visited link color to purple */
-  }
+  color: rgb(255, 0, 179); 
+}
+
+a:hover {
+  color: rgb(179, 0, 255);
+  background-color: transparent;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+}
+
 
 /* Photo Gallery Styles */
 .photo-gallery {

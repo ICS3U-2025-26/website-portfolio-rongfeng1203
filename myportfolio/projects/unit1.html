@@ -19,10 +19,6 @@
     </nav>
   </header>
   <main>
-    <figure>
-      <img src="../images/unit1-screenshot.png" alt="Screenshot of the Unit 1 JavaScript quiz interface">
-      <figcaption>Unit 1 Quiz UI (placeholder screenshot)</figcaption>
-    </figure>
 
     <section>
       <h2>Overview</h2>
@@ -46,19 +42,9 @@
       <ul>
         <li><a href="https://scratch.mit.edu/projects/1213507961/" target="_blank">ICS3U-HW 1</a></li>
         <li><a href="https://scratch.mit.edu/projects/1220531412/" target="_blank">ICS3U-HW 2</a></li>
+        <li><a href="quiz.html" >JavaScript quiz</a></li>
       </ul>
-      <pre><code>// Example: rendering a question
-const currentQuestion = questions[currentIndex];
-questionEl.textContent = currentQuestion.prompt;
-choicesEl.innerHTML = '';
-currentQuestion.choices.forEach((choice, idx) => {
-  const button = document.createElement('button');
-  button.textContent = choice;
-  button.addEventListener('click', () => selectAnswer(idx));
-  choicesEl.appendChild(button);
-  https://github.com/ICS3U-2025-26/website-portfolio-rongfeng1203
-});
-</code></pre>
+      <img width = 60% length = 60% src="../images/codesnippet.png" alt="code in scratch" />
     </section>
 
     <p>Back to <a href="index.html">projects</a> or play it in the <a href="../gaming.html">Gaming Corner</a> when available.</p>
