@@ -7,5 +7,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const href = a.getAttribute('href');
     if (href && href.endsWith(here)) a.style.fontWeight = '700';
   });
+
+  // Handle background audio with autoplay restrictions
+  const audio = document.getElementById('backgroundAudio');
+  
+  if (audio) {
+    console.log('Audio element found:', audio);
+    
+    // Add debugging events
+    audio.addEventListener('loadstart', () => console.log('Audio loading started'));
+    audio.addEventListener('canplay', () => console.log('Audio can play'));
+    audio.addEventListener('play', () => console.log('Audio started playing'));
+    audio.addEventListener('error', (e) => console.log('Audio error:', e));
+    
+    // Set volume to maximum and ensure it's audible
+    audio.volume = 1.0;
+    audio.muted = false;
+    console.log('Audio volume set to:', audio.volume);
+    console.log('Audio muted:', audio.muted);
+    
+    // Try to play audio automatically
+    audio.play().then(() => {
+      console.log('Autoplay successful - audio should be playing');
+    }).catch((error) => {
+      console.log('Autoplay failed:', error);
+      // If autoplay fails, play audio on first user interaction
+      const playAudio = () => {
+        console.log('User interaction detected, attempting to play audio');
+        audio.play().then(() => {
+          console.log('Manual play successful - audio should be playing');
+        }).catch((error) => {
+          console.log('Manual play failed:', error);
+        });
+        // Remove event listeners after first interaction
+        document.removeEventListener('click', playAudio);
+        document.removeEventListener('keydown', playAudio);
+      };
+      
+      document.addEventListener('click', playAudio);
+      document.addEventListener('keydown', playAudio);
+    });
+  } else {
+    console.log('Audio element not found!');
+  }
 });
 

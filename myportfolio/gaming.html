@@ -1,4 +1,5 @@
 <!doctype html>
+<!--cursor generated code, I edited some, added photo and js quize and cursor added sound-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -20,12 +21,22 @@
   </header>
 
   <main>
-    <p>Ongoing: Games from Units 1-4 will appear here. For now, check Unit 1 for the JS Quiz or click the image below to play Pentamania on Steam!</p>
+    <p>Ongoing: Games from Units 1-4 will appear here. For now, click below for the JS Quiz or click the image to play Pentamania on Steam!</p>
 
+    <a href="quiz.html">JS Quiz</a>
+    <br>
+    <br>
     <a href="https://store.steampowered.com/app/4033240/Pentamania_Alchemy_Madness/" target="_blank">
       <img src="images/pentamania.png" alt="Pentamania cover" style="border-radius: 10%;">
     </a>
   </main>
+
+  <!--https://www.w3schools.com/html/html5_audio.asp-->
+  <audio id="backgroundAudio" controls preload="auto" loop style="margin: 10px;">
+    <source src="images/sound.mp3" type="audio/mpeg">
+    <source src="images/sound.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+  </audio>
 
   <script src="script.js"></script>
 </body>
