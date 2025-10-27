@@ -1,5 +1,5 @@
 <!doctype html>
-<!--cursor generated code, I edited some, added photo and js quize and cursor added sound-->
+<!--cursor generated code, I edited some, added photo and js quize and cursor added sound/video-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -21,8 +21,9 @@
   </header>
 
   <main>
-    <h3>Ongoing: Games from Units 1-4 will appear here. For now, click below for the JS Quiz or click the image to play Pentamania on Steam!</h3>
-
+    <h2>Brief Intro</h2>
+    <p>OGames from Units 1-4 will appear here. For now, click below for the JS Quiz, click the image to play Pentamania on Steam, or view the video demo of my other game Drillage!</p>
+    <br>
     <a href="quiz.html">JS Quiz</a>
     <script src="script.js"></script>
     <br>
@@ -30,16 +31,21 @@
     <a href="https://store.steampowered.com/app/4033240/Pentamania_Alchemy_Madness/" target="_blank">
       <img src="images/pentamania.png" alt="Pentamania cover" style="border-radius: 10%;">
     </a>
-    <video>
-      <source src="images/2025-07-09 22-42-35.mov" type="video/mov"
+    <br>
+    <!--https://www.w3schools.com/html/html5_video.asp also cursor helped debugging-->
+    <video autoplay muted controls loop playsinline preload="auto" style="border-radius: 10%; max-width: 100%;">
+      <source src="images/Drillage.mov" type="video/quicktime" >
+      <source src="images/Drillage.mov" type="video/mp4" >
+    Your browser does not support the video tag.
     </video>
-      <!--https://www.w3schools.com/html/html5_audio.asp-->
+
+      <!--https://www.w3schools.com/html/html5_audio.asp also cursor helped debugging-->
     <audio id="backgroundAudio" controls preload="auto" loop style="margin: 10px;">
       <source src="images/sound.mp3" type="audio/mpeg">
       <source src="images/sound.mp3" type="audio/mp3">
     Your browser does not support the audio element.
     </audio>
-    <p>Audio made by @aaron.wang.2007 / collaborator of Pentamania</p>
+    <p>Theme made by @aaron.wang.2007 / collaborator of Pentamania</p>
     
   </main>
 
