@@ -21,24 +21,30 @@
   </header>
 
   <main>
-    <p>Ongoing: Games from Units 1-4 will appear here. For now, click below for the JS Quiz or click the image to play Pentamania on Steam!</p>
+    <h3>Ongoing: Games from Units 1-4 will appear here. For now, click below for the JS Quiz or click the image to play Pentamania on Steam!</h3>
 
     <a href="quiz.html">JS Quiz</a>
+    <script src="script.js"></script>
     <br>
     <br>
     <a href="https://store.steampowered.com/app/4033240/Pentamania_Alchemy_Madness/" target="_blank">
       <img src="images/pentamania.png" alt="Pentamania cover" style="border-radius: 10%;">
     </a>
+    <video>
+      <source src="images/2025-07-09 22-42-35.mov" type="video/mov"
+    </video>
+      <!--https://www.w3schools.com/html/html5_audio.asp-->
+    <audio id="backgroundAudio" controls preload="auto" loop style="margin: 10px;">
+      <source src="images/sound.mp3" type="audio/mpeg">
+      <source src="images/sound.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+    </audio>
+    <p>Audio made by @aaron.wang.2007 / collaborator of Pentamania</p>
+    
   </main>
 
-  <!--https://www.w3schools.com/html/html5_audio.asp-->
-  <audio id="backgroundAudio" controls preload="auto" loop style="margin: 10px;">
-    <source src="images/sound.mp3" type="audio/mpeg">
-    <source src="images/sound.mp3" type="audio/mp3">
-  Your browser does not support the audio element.
-  </audio>
 
-  <script src="script.js"></script>
+  
 </body>
 </html>
 
