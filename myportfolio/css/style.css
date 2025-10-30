@@ -1,10 +1,77 @@
 /* Basic minimal styling for readability, Cursor generated this */
 :root { color-scheme: light dark; }
-body { background-color: rgb(39, 47, 101);
+body { background-color: rgb(34, 38, 88);
   color: rgb(135, 255, 43);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0 1rem; line-height: 1.6; }
-header { padding: 1rem 0; border-bottom: 1px solid #d4d1d1; }
-nav a { margin-right: .5rem; }
+  font-family: Copperplate;
+  font-size: 20px}
+  /*!system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0 1rem; line-height: 1.6; }*/
+header {padding: 0.1rem }
+
+header h1 { font-size: 3rem; text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 0 0 12px rgba(135, 255, 43, 0.4); }
+h2 {  
+  text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 
+  0 0 12px rgba(124, 255, 23, 0.4); }
+h3 {  
+  text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 
+  0 0 12px rgba(124, 255, 23, 0.4); }
+/*h2 {
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14,
+               0 0 10px #39ff14,
+               0 0 20px #39ff14,
+               0 0 40px #39ff14;
+}*/
+/*cursor and chat gpt helped*/
+/* Top-right banner/icon */
+.site-logo {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  height: 20px;
+  width: auto;
+}
+
+/* Top navigation bar */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem;
+  align-items: center;
+  background: rgb(115, 45, 255);
+  border: 3px solid rgb(150, 255, 75);
+  border-radius: 10px;
+  padding: .5rem .75rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 12px rgb(135, 255, 43);
+  max-width: 800px;   /* or any width you like */
+  margin: 0 auto;
+  animation: fadeBackground 20s infinite alternate; /* animation applied */
+}
+
+/* Animation keyframes */
+@keyframes fadeBackground {
+  0% {
+    background: rgba(115, 45, 255, 0.2); /* more transparent */
+  }
+  50% {
+    background: rgba(115, 45, 255, 0.8); /* less transparent */
+  }
+  100% {
+    background: rgba(115, 45, 255, 0.3); /* back to more transparent */
+  }
+}
+
+.site-nav a {
+  margin: 0;
+  padding: .3rem .5rem;
+  border-radius: 6px;
+}
+
+.site-nav a:hover {
+  background: rgb(145, 255, 0);
+}
 main { max-width: 900px; margin: 1rem auto; }
 img { max-width: 100%; height: auto; display: block; }
 table { width: 100%; border-collapse: collapse; }
@@ -24,7 +91,7 @@ a:visited {
 }
 
 a:hover {
-  color: rgb(179, 0, 255);
+  color: rgb(255, 149, 0);
   background-color: transparent;
 }
 
