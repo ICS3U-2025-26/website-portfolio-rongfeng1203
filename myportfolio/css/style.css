@@ -6,8 +6,8 @@ body { background-color: rgb(34, 38, 88);
   font-size: 20px}
   /*!system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0 1rem; line-height: 1.6; }*/
 header {padding: 0.1rem }
-
-header h1 { font-size: 3rem; text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 0 0 12px rgba(135, 255, 43, 0.4); }
+/*chat gpt helped me with moving the padding and also the animation*/
+header h1 {padding-left: 20px; font-size: 3rem; text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 0 0 12px rgba(135, 255, 43, 0.4); }
 h2 {  
   text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 
   0 0 12px rgba(124, 255, 23, 0.4); }
