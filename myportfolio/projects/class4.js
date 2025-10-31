@@ -1,8 +1,8 @@
 console.log("Hello, world!");//finally this comment type, i miss u
 
 /* 
-aye I don't like this way of commeng
-i hate this
+aye I don't like this way of commenting
+ALSO ALERT THIS QUIZ IS LOWKEY WEIRD, PREPARE YOURSLEF!!!
 */
 
 //1. creating variables: use let only the FIRST time you create a variable

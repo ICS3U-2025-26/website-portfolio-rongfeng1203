@@ -1,9 +1,10 @@
 /* Basic minimal styling for readability, Cursor generated this */
 :root { color-scheme: light dark; }
 body { background-color: rgb(34, 38, 88);
-  color: rgb(135, 255, 43);
+  color: rgb(135, 255, 43);/*color of text*/
   font-family: Copperplate;
   font-size: 20px}
+  /*below is the font Cursor chose, I wanted something cooler
   /*!system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0 1rem; line-height: 1.6; }*/
 header {padding: 0.1rem }
 /*chat gpt helped me with moving the padding and also the animation*/
@@ -22,6 +23,7 @@ h3 {
                0 0 40px #39ff14;
 }*/
 /*cursor and chat gpt helped*/
+/*glowing effect is the text shadow
 /* Top-right banner/icon */
 .site-logo {
   position: absolute;
@@ -30,27 +32,28 @@ h3 {
   height: 20px;
   width: auto;
 }
-
+/*this make sures my rina's portforlio logo is in the same place for every website
 /* Top navigation bar */
 .site-nav {
   display: flex;
   flex-wrap: wrap;
   gap: .2rem;
   align-items: center;
-  background: rgb(115, 45, 255);
+  background: rgb(115, 45, 255);/*color of the nav bar*/
   border: 3px solid rgb(150, 255, 75);
-  border-radius: 10px;
+  border-radius: 10px;/* I want a thick glowing boarder*/
   padding: .5rem .75rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 0 12px rgb(135, 255, 43);
-  max-width: 800px;   /* or any width you like */
+  box-shadow: 0 0 12px rgb(135, 255, 43);/*glowing effect*/
+  max-width: 800px;  
   margin: 0 auto;
   animation: fadeBackground 20s infinite alternate; /* animation applied */
 }
 
 /* Animation keyframes */
+/* chat gpt helped, I like the bright purple but the audience my feel tired looking at it so i made it fade constantly*/
 @keyframes fadeBackground {
   0% {
     background: rgba(115, 45, 255, 0.2); /* more transparent */
@@ -62,13 +65,13 @@ h3 {
     background: rgba(115, 45, 255, 0.3); /* back to more transparent */
   }
 }
-
+/*still propertise of the nav bar*/
 .site-nav a {
   margin: 0;
   padding: .3rem .5rem;
   border-radius: 6px;
 }
-
+/*I want it to change color when I hover over the links*/
 .site-nav a:hover {
   background: rgb(145, 255, 0);
 }
@@ -79,7 +82,8 @@ th, td { border: 1px solid #000000; padding: .5rem; text-align: left; }
 pre { background: rgb(0, 0, 0); padding: .75rem; overflow: auto; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
 
-/* googled code for link colors */
+/* googled code for link colors also Cursor helped debugging
+http://w3schools.com/css/css_link.asp*/
 a:link {
   color: rgb(0, 255, 251);
   background-color: transparent;
@@ -101,7 +105,9 @@ a:active {
 }
 
 
-/* Photo Gallery Styles */
+/* Photo Gallery Styles 
+I stARTED  by looking at this website https://www.w3schools.com/css/css_image_gallery.asp*/
+/*the cursor helped me debug*/
 .photo-gallery {
   margin: 2rem 0;
 }
@@ -114,7 +120,7 @@ a:active {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*changing size for webpage size*/
   gap: 1.5rem;
   padding: 1rem 0;
 }
@@ -130,7 +136,7 @@ a:active {
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(135, 255, 43, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 43, 216, 0.3);
 }
 
 .gallery-item img {

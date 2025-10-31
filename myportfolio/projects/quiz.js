@@ -6,7 +6,7 @@ let ans1 = confirm("Is BSS's mascot a bobcat?");
 console.log(ans1);
 if (ans1 === true) {
     alert("You are correct!");
-    finalAnswer = finalAnswer + 2
+    finalAnswer = finalAnswer + 2//adding points
 }
 else if (ans1 === false) {
     alert("You are wrong!");
@@ -16,7 +16,7 @@ let ans2 = confirm("Do you take comp sci?");
 console.log(ans2);
 if (ans2 === true) {
     alert("You are correct!");
-    finalAnswer = finalAnswer + 2
+    finalAnswer = finalAnswer + 2//add more points
 }
 else if (ans2 === false) {
     alert("You are wrong!");
@@ -34,7 +34,7 @@ else if (ans3 === false) {
 
 let ans4 = prompt("What is your grade?");
 console.log(ans4);
-ans4 = parseInt(ans4);
+ans4 = parseInt(ans4);//convert answer to number
 if (ans4 >= 9) {
     alert("You are correct!");
     finalAnswer = finalAnswer + 2

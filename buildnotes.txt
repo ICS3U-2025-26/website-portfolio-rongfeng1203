@@ -1,22 +1,29 @@
 total failure experience with chat gpt, had to revert code
 https://chatgpt.com/share/68f127d7-298c-8011-979e-f40b20b6cd29 
 https://chatgpt.com/share/68f127c0-cf20-8011-955e-cee177b8c46e
-talked to cursor and generated "my-app"
+
+talked to cursor and generated "my-app folder"
 it generated good code but can't add effect to stable website
 here's the chat : https://drive.google.com/file/d/178IemOOB9bH2_SXdmoWeyo4IbBd3mREE/view?usp=sharing
 
 cursor also helped me with the new pages, https://drive.google.com/file/d/1NNXKJubzAASLxlTYOx8urb0XYWBDnH_g/view?usp=sharing 
 
+Scaffolded myportfolio Home page and planned structure (projects, resources, about, gaming, images, script.js).
 
-2025-10-17: Scaffolded myportfolio Home page and planned structure (projects, resources, about, gaming, images, script.js).
 cursor helped with photo gallery https://drive.google.com/file/d/1b5tOqkZebUW0SZR0Q46hS-Qqferznlcu/view?usp=sharing 
-
 
 https://drive.google.com/file/d/187q53b6IfEM5IZfPPVkssgDjfxTjgEWr/view?usp=sharing 
 cursor helped with audio 
+my original attempt was from https://www.w3schools.com/html/html5_audio.asp 
 
 https://drive.google.com/file/d/1SnpjSs-Zgn5bAphbnUhoDcFbC36gEdFe/view?usp=sharing
 cursor helped with video debugging 
 
 https://drive.google.com/file/d/1UgQNqruO_I02pwAdkdad_PpnqA-jxo8H/view?usp=sharing
-cursor made a ugly bar and i made it pretty
+cursor made a ugly bar and i made it pretty with altering it's code
+
+
+Images citations
+isock photo meme is from this link https://www.istockphoto.com/photos/troll-meme
+"Nice" meme from unit 2 class 1, is from this website https://www.amazon.ca/Content-Ultimate-Hilarious-Carving-Content-Aware/dp/B0CTHRGW2X
+All other content are either my photography, my art for games. Banner I made with illstruator
