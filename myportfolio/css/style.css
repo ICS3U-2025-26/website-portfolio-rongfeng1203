@@ -117,7 +117,7 @@ I stARTED  by looking at this website https://www.w3schools.com/css/css_image_ga
   margin-bottom: 2rem;
   color: rgb(135, 255, 43);
 }
-
+/*the layout of the grid*/
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*changing size for webpage size*/
@@ -136,12 +136,12 @@ I stARTED  by looking at this website https://www.w3schools.com/css/css_image_ga
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(255, 43, 216, 0.3);
-}
-
+  box-shadow: 0 8px 25px rgba(255, 43, 216, 0.495);
+}/**/
+/*size of the image*/
 .gallery-item img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border-radius: 8px;
   margin: 0;
