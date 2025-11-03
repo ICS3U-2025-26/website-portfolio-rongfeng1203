@@ -26,6 +26,7 @@ After Cursor ran out of free trials, I went to chat gpt, and here's the full cha
 
 chatgpt helped me change to custom fonts with css, also w3schoo 
 https://www.w3schools.com/css/css3_fonts.asp 
+Downloaded audiowide font from https://fonts.google.com/specimen/Audiowide?categoryFilters=Feeling:%2FExpressive%2FFuturistic 
 
 All the chats with chatgpt is docked in this one:
 
