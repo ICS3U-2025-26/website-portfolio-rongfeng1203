@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     audio.addEventListener('play', () => console.log('Audio started playing'));
     audio.addEventListener('error', (e) => console.log('Audio error:', e));
     
-    // Set volume to maximum and ensure it's audible
+    // Set volume to maximum and ensure it's audible (this doesn't change our computer audio)
     audio.volume = 1.0;
     audio.muted = false;
     console.log('Audio volume set to:', audio.volume);
