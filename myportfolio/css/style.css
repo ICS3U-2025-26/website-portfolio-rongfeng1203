@@ -1,8 +1,15 @@
 /* Basic minimal styling for readability, Cursor generated this */
 :root { color-scheme: light dark; }
-body { background-color: rgb(34, 38, 88);
-  color: rgb(135, 255, 43);/*color of text*/
-  font-family: Copperplate;
+@font-face {
+  font-family: 'MyFont'; /* a name you choose */
+  src: url('../images/myFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}/*chat gpt and w3 school helped me with changing fonts
+https://www.w3schools.com/css/css3_fonts.asp*/
+body { background-color: rgba(34, 44, 88, 0.748);
+  color: rgba(117, 255, 43, 0.854);/*color of text*/
+  font-family: myFont;
   font-size: 20px}
   /*below is the font Cursor chose, I wanted something cooler
   /*!system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0 1rem; line-height: 1.6; }*/
@@ -10,10 +17,10 @@ header {padding: 0.1rem }
 /*chat gpt helped me with moving the padding and also the animation*/
 header h1 {padding-left: 20px; font-size: 3rem; text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 0 0 12px rgba(135, 255, 43, 0.4); }
 h2 {  
-  text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 
+  text-shadow: 0 0 3px rgba(135, 255, 43, 0.444), 
   0 0 12px rgba(124, 255, 23, 0.4); }
 h3 {  
-  text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 
+  text-shadow: 0 0 3px rgba(135, 255, 43, 0.444), 
   0 0 12px rgba(124, 255, 23, 0.4); }
 /*h2 {
   color: #39ff14;

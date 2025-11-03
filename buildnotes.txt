@@ -24,6 +24,10 @@ cursor made a ugly bar and i made it pretty with altering it's code
 
 After Cursor ran out of free trials, I went to chat gpt, and here's the full chat 
 
+chatgpt helped me change to custom fonts with css, also w3schoo 
+https://www.w3schools.com/css/css3_fonts.asp 
+
+All the chats with chatgpt is docked in this one:
 
 Images citations
 isock photo meme is from this link https://www.istockphoto.com/photos/troll-meme
