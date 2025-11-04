@@ -1,13 +1,13 @@
 /* Basic minimal styling for readability, Cursor generated this */
 :root { color-scheme: light dark; }
 @font-face {
-  font-family: 'MyFont'; /* a name you choose */
+  font-family: 'myFont'; /* a name you choose */
   src: url('../images/myFont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }/*chat gpt and w3 school helped me with changing fonts
 https://www.w3schools.com/css/css3_fonts.asp*/
-body { background-color: rgba(34, 44, 88, 0.748);
+body { background-color: rgb(34, 44, 88);
   color: rgba(117, 255, 43, 0.854);/*color of text*/
   font-family: myFont;
   font-size: 20px}
@@ -15,13 +15,20 @@ body { background-color: rgba(34, 44, 88, 0.748);
   /*!system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 0 1rem; line-height: 1.6; }*/
 header {padding: 0.1rem }
 /*chat gpt helped me with moving the padding and also the animation*/
-header h1 {padding-left: 20px; font-size: 3rem; text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 0 0 12px rgba(135, 255, 43, 0.4); }
+header h1 {padding-left: 20px; font-size: 3rem; 
+  text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 
+  0 0 10px rgba(135, 255, 43, 0.4); }
 h2 {  
-  text-shadow: 0 0 3px rgba(135, 255, 43, 0.444), 
-  0 0 12px rgba(124, 255, 23, 0.4); }
+  text-shadow: 0 0 4px rgba(135, 255, 43, 0.6), 
+  0 0 8px rgba(124, 255, 23, 0.4); }
 h3 {  
-  text-shadow: 0 0 3px rgba(135, 255, 43, 0.444), 
-  0 0 12px rgba(124, 255, 23, 0.4); }
+  text-shadow: 0 0 3px rgba(135, 255, 43, 0.6), 
+  0 0 6px rgba(124, 255, 23, 0.4); }
+/*Chat gpt helped me match the css style in safari with chrome*/
+  body.safari h1, body.safari h2, body.safari h3 {
+  text-shadow: 0 0 3px rgba(135, 255, 43, 0.4),
+               0 0 6px rgba(135, 255, 43, 0.2);
+}
 /*h2 {
   color: #39ff14;
   text-shadow: 0 0 5px #39ff14,

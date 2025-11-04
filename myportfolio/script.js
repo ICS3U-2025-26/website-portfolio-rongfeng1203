@@ -55,3 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+    document.body.classList.add('safari');
+  }
+
+  //Chat gpt helped me match the css style in safari with chrome

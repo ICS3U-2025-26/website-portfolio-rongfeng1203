@@ -28,6 +28,8 @@ chatgpt helped me change to custom fonts with css, also w3schoo
 https://www.w3schools.com/css/css3_fonts.asp 
 Downloaded audiowide font from https://fonts.google.com/specimen/Audiowide?categoryFilters=Feeling:%2FExpressive%2FFuturistic 
 
+Chat gpt helped me match the css style in safari with chrome
+
 All the chats with chatgpt is docked in this one:
 
 Images citations
