@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Try to play audio automatically
     audio.play().then(() => {
-      console.log('Autoplay successful - audio should be playing');
+      console.log('Autoplay successful - audio should be playing');//console debug logs
     }).catch((error) => {
       console.log('Autoplay failed:', error);
       // If autoplay fails, play audio on first user interaction
