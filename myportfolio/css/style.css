@@ -43,6 +43,13 @@ h3 {
   position: absolute;
   top: 18px;
   right: 18px;
+  height: 80px;
+  width: auto;
+}
+/*.site-logo {
+  position: absolute;
+  top: 18px;
+  right: 18px;
   height: 20px;
   width: auto;
 }
