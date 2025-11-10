@@ -1,7 +1,7 @@
 /* Basic minimal styling for readability, Cursor generated this */
 :root { color-scheme: light dark; }
 @font-face {
-  font-family: 'myFont'; /* a name you choose */
+  font-family: 'myFont'; /* audiowide font from google fonts */
   src: url('../images/myFont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -24,6 +24,8 @@ h2 {
 h3 {  
   text-shadow: 0 0 3px rgba(135, 255, 43, 0.6), 
   0 0 6px rgba(124, 255, 23, 0.4); }
+/*chat gpt helped me with adding glowing effect to h1 h2 h3*/
+
 /*Chat gpt helped me match the css style in safari with chrome*/
   body.safari h1, body.safari h2, body.safari h3 {
   text-shadow: 0 0 3px rgba(135, 255, 43, 0.4),
@@ -36,9 +38,10 @@ h3 {
                0 0 20px #39ff14,
                0 0 40px #39ff14;
 }*/
-/*cursor and chat gpt helped*/
-/*glowing effect is the text shadow
-/* Top-right banner/icon */
+/* this is the old code that i used to test effects*/
+
+/* Top-right icon, I made adjustments to generated code, 
+original code is below */
 .site-logo {
   position: absolute;
   top: 18px;
@@ -53,7 +56,7 @@ h3 {
   height: 20px;
   width: auto;
 }
-/*this make sures my rina's portforlio logo is in the same place for every website
+/*this make sures my "rina's portforlio logo" is in the same place for every website
 /* Top navigation bar */
 .site-nav {
   display: flex;
@@ -70,11 +73,11 @@ h3 {
   box-shadow: 0 0 12px rgb(135, 255, 43);/*glowing effect*/
   max-width: 800px;  
   margin: 0 auto;
-  animation: fadeBackground 20s infinite alternate; /* animation applied */
+  animation: fadeBackground 20s infinite alternate; /* animation looping for the color intensity */
 }
 
 /* Animation keyframes */
-/* chat gpt helped, I like the bright purple but the audience my feel tired looking at it so i made it fade constantly*/
+/* chat gpt helped, I like the bright purple but the audience my feel tired looking at it so I made it fade constantly*/
 @keyframes fadeBackground {
   0% {
     background: rgba(115, 45, 255, 0.2); /* more transparent */
@@ -127,8 +130,8 @@ a:active {
 
 
 /* Photo Gallery Styles 
-I stARTED  by looking at this website https://www.w3schools.com/css/css_image_gallery.asp*/
-/*the cursor helped me debug*/
+I started by looking at this website https://www.w3schools.com/css/css_image_gallery.asp*/
+/*then cursor helped me debug*/
 .photo-gallery {
   margin: 2rem 0;
 }
@@ -145,7 +148,7 @@ I stARTED  by looking at this website https://www.w3schools.com/css/css_image_ga
   gap: 1.5rem;
   padding: 1rem 0;
 }
-
+/*a shadow/glow when you hover over photo*/
 .gallery-item {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -154,11 +157,11 @@ I stARTED  by looking at this website https://www.w3schools.com/css/css_image_ga
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
-
+/*interactive effect when you hover over photo*/
 .gallery-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(255, 43, 216, 0.495);
-}/**/
+}
 /*size of the image*/
 .gallery-item img {
   width: 100%;

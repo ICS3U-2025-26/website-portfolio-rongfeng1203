@@ -10,7 +10,8 @@ cursor also helped me with the new pages, https://drive.google.com/file/d/1NNXKJ
 
 Scaffolded myportfolio Home page and planned structure (projects, resources, about, gaming, images, script.js).
 
-cursor helped with photo gallery https://drive.google.com/file/d/1b5tOqkZebUW0SZR0Q46hS-Qqferznlcu/view?usp=sharing 
+cursor helped with photo gallery, https://www.w3schools.com/css/css_image_gallery.asp 
+ https://drive.google.com/file/d/1b5tOqkZebUW0SZR0Q46hS-Qqferznlcu/view?usp=sharing 
 
 https://drive.google.com/file/d/187q53b6IfEM5IZfPPVkssgDjfxTjgEWr/view?usp=sharing 
 cursor helped with audio 
@@ -20,9 +21,7 @@ https://drive.google.com/file/d/1SnpjSs-Zgn5bAphbnUhoDcFbC36gEdFe/view?usp=shari
 cursor helped with video debugging 
 
 https://drive.google.com/file/d/1UgQNqruO_I02pwAdkdad_PpnqA-jxo8H/view?usp=sharing
-cursor made a ugly bar and i made it pretty with altering it's code
-
-After Cursor ran out of free trials, I went to chat gpt, and here's the full chat 
+cursor made a ugly bar and i made it pretty by altering it's code
 
 chatgpt helped me change to custom fonts with css, also w3schoo 
 https://www.w3schools.com/css/css3_fonts.asp 
@@ -31,6 +30,7 @@ Downloaded audiowide font from https://fonts.google.com/specimen/Audiowide?categ
 Chat gpt helped me match the css style in safari with chrome
 
 All the chats with chatgpt is docked in this one:
+MISSING CHAT LINK ADD LATER 
 
 Images citations
 isock photo meme is from this link https://www.istockphoto.com/photos/troll-meme
