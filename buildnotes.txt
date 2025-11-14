@@ -5,26 +5,31 @@ https://chatgpt.com/share/68f127c0-cf20-8011-955e-cee177b8c46e
 talked to cursor and generated "my-app folder"
 it generated good code but can't add effect to stable website
 here's the chat : https://drive.google.com/file/d/178IemOOB9bH2_SXdmoWeyo4IbBd3mREE/view?usp=sharing
+------
 
-cursor also helped me with the new pages, https://drive.google.com/file/d/1NNXKJubzAASLxlTYOx8urb0XYWBDnH_g/view?usp=sharing 
+cursor helped me generate template for the new pages, https://drive.google.com/file/d/1NNXKJubzAASLxlTYOx8urb0XYWBDnH_g/view?usp=sharing 
 
 Scaffolded myportfolio Home page and planned structure (projects, resources, about, gaming, images, script.js).
 
-cursor helped with photo gallery, https://www.w3schools.com/css/css_image_gallery.asp 
+cursor helped with photo gallery, original attempt : https://www.w3schools.com/css/css_image_gallery.asp 
  https://drive.google.com/file/d/1b5tOqkZebUW0SZR0Q46hS-Qqferznlcu/view?usp=sharing 
 
+googled code for link colors 
+http://w3schools.com/css/css_link.asp
+
 https://drive.google.com/file/d/187q53b6IfEM5IZfPPVkssgDjfxTjgEWr/view?usp=sharing 
-cursor helped with audio 
+cursor helped with audio playing
 my original attempt was from https://www.w3schools.com/html/html5_audio.asp 
 
 https://drive.google.com/file/d/1SnpjSs-Zgn5bAphbnUhoDcFbC36gEdFe/view?usp=sharing
 cursor helped with video debugging 
 
 https://drive.google.com/file/d/1UgQNqruO_I02pwAdkdad_PpnqA-jxo8H/view?usp=sharing
-cursor made a ugly bar and i made it pretty by altering it's code
+cursor made a ugly bar and I change the color scheme to make it more attractive.
 
 chatgpt helped me change to custom fonts with css, also w3schoo 
 https://www.w3schools.com/css/css3_fonts.asp 
+
 Downloaded audiowide font from https://fonts.google.com/specimen/Audiowide?categoryFilters=Feeling:%2FExpressive%2FFuturistic 
 
 Chat gpt helped me match the css style in safari with chrome
