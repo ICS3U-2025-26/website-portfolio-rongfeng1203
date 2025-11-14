@@ -1,4 +1,4 @@
-//cursor generated this for me !
+//cursor generated this for me! I didn't change anything
 
 // Minimal JS placeholder for future interactivity
 // Highlights the current page in the navigation menu 

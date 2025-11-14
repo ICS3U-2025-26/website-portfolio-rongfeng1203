@@ -1,3 +1,4 @@
+//code I wrote in class
 alert("You will take a quiz, YES = OK, NO = Cancel");
 
 let finalAnswer = 0//initializing 
@@ -39,7 +40,7 @@ if (ans4 >= 9 && ans4 <= 12) {//range between 9-12
     alert("You are correct!");
     finalAnswer = finalAnswer + 2
 }
-else if (ans4 > 12 && ans4 < 9) {
+else if (ans4 > 12 || ans4 < 9) {//if the grade is greater than 12 or less than 9, they are either in middle school or university
     alert("You are wrong!");
 }
 
@@ -52,5 +53,5 @@ if (ans5 >= 0) {
 }
 
 console.log(finalAnswer);
-alert(`Your score is ${finalAnswer}/10`);//concatenation, combines string
+alert(`Your score is ${finalAnswer}/10`);//final score out of 10
 

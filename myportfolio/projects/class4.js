@@ -1,3 +1,4 @@
+//COde i wrote in class
 console.log("Hello, world!");//finally this comment type, i miss u
 
 /* 
