@@ -1,16 +1,53 @@
-<!--Cursor generated this for me, I didn't really change anything from there-->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Unit 4 Project</title>
+  <title>Unit 4 — Animations &amp; Game Development</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    pre {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,160,43,0.4);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      color: #e0e0e0;
+      line-height: 1.5;
+    }
+    .topic-section {
+      border-top: 2px solid rgba(255,160,43,0.3);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+    .copy-btn {
+      background: rgba(183,0,255,0.5);
+      border: 2px solid rgba(255,72,0,0.7);
+      border-radius: 6px;
+      color: rgba(255,160,43,0.9);
+      font-family: myFont, sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 4px 12px;
+      margin-bottom: 6px;
+    }
+    .copy-btn:hover { background: rgba(183,0,255,0.8); }
+    iframe {
+      border: 2px solid rgba(255,160,43,0.4);
+      border-radius: 10px;
+      width: 100%;
+      max-width: 620px;
+      display: block;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <a href="../index.html"><img class="site-logo" src="../images/icon.png" alt="personal crystal icon"></a>
-    <h1>Unit 4 — Project</h1>
+    <h1>Unit 4 — Animations &amp; Game Development</h1>
     <nav class="site-nav">
       <a href="../index.html">Home</a>
       <a href="index.html">My Projects</a>
@@ -23,13 +60,373 @@
 
   <main>
     <br>
-    <a href="projects/GameFiles/index.html" target="_blank">
-      <img src="images/GameTitle.png" alt="BBreaker game cover image" style="border-radius: 10%;">
-    </a>
-    <br>
+    <h2>Overview</h2>
+    <p>Unit 4 introduced p5.js — a JavaScript library for creative coding. I built interactive sketches, learned game-loop architecture with <code>setup()</code> and <code>draw()</code>, and ultimately created a full original game. Below are three milestone tasks, the game tutorial I followed, and my final project.</p>
+
+    <!-- ======================== MILESTONE 1 ======================== -->
+    <section class="topic-section">
+      <h2>Milestone 1 — Bouncing Ball</h2>
+      <p>This was my first interactive p5.js sketch. A coloured ellipse bounces around the canvas, reversing direction each time it hits a wall. Clicking the ball changes its colour randomly and reverses its direction. I learned how <code>draw()</code> acts as a continuous loop, how to track position and speed with variables, and how to use <code>mousePressed()</code> with <code>dist()</code> for click detection.</p>
+      <iframe src="milestone1.html" height="420" title="Milestone 1 — Bouncing Ball" scrolling="no"></iframe>
+      <button class="copy-btn" onclick="copyCode('code-m1', this)">Copy Code</button>
+      <pre id="code-m1">let radius = 50;
+let x = 200;
+let y = 200;
+let speedX = 2;
+let speedY = 2;
+let r = 208;
+let g = 0;
+let b = 120;
+
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(40);
+  fill(r, g, b);
+  noStroke();
+  ellipse(x, y, radius * 2);
+
+  x += speedX;
+  y += speedY;
+
+  if (x > width - radius || x < radius) speedX = -speedX;
+  if (y > height - radius || y < radius) speedY = -speedY;
+}
+
+// Click the ball to change its colour and reverse direction
+function mousePressed() {
+  let d = dist(mouseX, mouseY, x, y);
+  if (d &lt; radius) {
+    r = random(255);
+    g = random(255);
+    b = random(255);
+    speedX = -speedX;
+    speedY = -speedY;
+  }
+}</pre>
+    </section>
+
+    <!-- ======================== MILESTONE 2 ======================== -->
+    <section class="topic-section">
+      <h2>Milestone 2 — Clicker Game</h2>
+      <p>I built a 30-second reflex game where the player clicks a moving circle as many times as possible before the timer runs out. Building this taught me how to manage game states (playing vs. game over), use <code>setInterval()</code> for a countdown, and reset all variables on restart. The score and timer are drawn to the canvas each frame using the <code>text()</code> function.</p>
+      <iframe src="milestone2.html" height="430" title="Milestone 2 — Clicker Game" scrolling="no"></iframe>
+      <button class="copy-btn" onclick="copyCode('code-m2', this)">Copy Code</button>
+      <pre id="code-m2">let target = { x: 200, y: 200, radius: 40 };
+let score = 0;
+let timeLeft = 30;
+let gameOver = false;
+
+function setup() {
+  createCanvas(500, 400);
+  textAlign(CENTER, CENTER);
+  // Countdown: decrease timeLeft once per second
+  setInterval(function() {
+    if (!gameOver) {
+      timeLeft--;
+      if (timeLeft &lt;= 0) gameOver = true;
+    }
+  }, 1000);
+}
+
+function draw() {
+  background(30, 30, 50);
+  fill(255);
+  textSize(28);
+  text("Click The Circle!", width / 2, 40);
+  textSize(20);
+  text("Score: " + score, width / 2, 70);
+  text("Time: " + timeLeft, width - 80, 40);
+
+  if (gameOver) {
+    fill(255, 100, 100);
+    textSize(40);
+    text("GAME OVER", width / 2, height / 2);
+    textSize(24);
+    text("Final Score: " + score, width / 2, height / 2 + 50);
+    text("Click to Restart", width / 2, height / 2 + 90);
+    return;
+  }
+
+  fill(100, 200, 255);
+  noStroke();
+  ellipse(target.x, target.y, target.radius * 2);
+}
+
+function mousePressed() {
+  if (gameOver) {           // restart on click after game over
+    score = 0;
+    timeLeft = 30;
+    gameOver = false;
+    return;
+  }
+  let d = dist(mouseX, mouseY, target.x, target.y);
+  if (d &lt; target.radius) {
+    score++;
+    target.x = random(target.radius, width - target.radius);
+    target.y = random(100, height - target.radius);
+  }
+}</pre>
+    </section>
+
+    <!-- ======================== MILESTONE 3 ======================== -->
+    <section class="topic-section">
+      <h2>Milestone 3 — Minesweeper Grid</h2>
+      <p>This milestone taught me how to use 2D arrays to represent a grid of cells. Each cell is an object that stores its position, whether it's a mine, whether it's been revealed, and whether it's been flagged. Left-clicking reveals a cell; right-clicking toggles a flag. Building this reinforced nested loops, object properties, and mouse-button detection with <code>mouseButton === RIGHT</code>.</p>
+      <iframe src="milestone3.html" height="430" title="Milestone 3 — Minesweeper Grid" scrolling="no"></iframe>
+      <button class="copy-btn" onclick="copyCode('code-m3', this)">Copy Code</button>
+      <pre id="code-m3">let cols = 10;
+let rows = 10;
+let cellSize = 40;
+let grid = [];
+
+function setup() {
+  createCanvas(cols * cellSize, rows * cellSize);
+  document.oncontextmenu = function() { return false; }; // disable right-click menu
+
+  for (let c = 0; c &lt; cols; c++) {
+    grid[c] = [];
+    for (let r = 0; r &lt; rows; r++) {
+      let isMine = random(1) &lt; 0.1;  // 10% chance of mine
+      grid[c][r] = {
+        x: c * cellSize,
+        y: r * cellSize,
+        mine: isMine,
+        revealed: false,
+        flagged: false
+      };
+    }
+  }
+}
+
+function draw() {
+  for (let c = 0; c &lt; cols; c++) {
+    for (let r = 0; r &lt; rows; r++) {
+      let cell = grid[c][r];
+      stroke(0);
+      if (cell.revealed) {
+        fill(cell.mine ? color(255, 0, 0) : color(200));
+      } else if (cell.flagged) {
+        fill(255, 200, 0);
+      } else {
+        fill(100);
+      }
+      rect(cell.x, cell.y, cellSize, cellSize);
+    }
+  }
+}
+
+function mousePressed() {
+  let c = floor(mouseX / cellSize);
+  let r = floor(mouseY / cellSize);
+  if (c >= 0 && c &lt; cols && r >= 0 && r &lt; rows) {
+    let cell = grid[c][r];
+    if (mouseButton === RIGHT) {
+      if (!cell.revealed) cell.flagged = !cell.flagged;
+    } else if (mouseButton === LEFT) {
+      if (!cell.flagged) cell.revealed = true;
+    }
+  }
+}</pre>
+    </section>
+
+    <!-- ======================== GAME TUTORIAL ======================== -->
+    <section class="topic-section">
+      <h2>Game Tutorial — Platformer with Physics</h2>
+      <p>This tutorial walked me through building a side-scrolling platformer from scratch using p5.js. I learned how to implement gravity by incrementing vertical velocity each frame, how to detect and resolve collisions between the player rectangle and platform rectangles, and how to use objects to store all the state for a player (<code>x</code>, <code>y</code>, <code>vx</code>, <code>vy</code>, <code>isGrounded</code>). I also added coin collection with a score counter, sound effects triggered on pickup, and randomly generated platforms for replayability. The biggest challenge was the collision resolution — snapping the player to the top of a platform only when falling downward, so that jumping through platforms from below still works correctly.</p>
+      <button class="copy-btn" onclick="copyCode('code-tut', this)">Copy Code</button>
+      <pre id="code-tut">// ---- Platformer Tutorial — Physics, Collisions, Coins ----
+
+let player = {
+  x: 50, y: 50, w: 30, h: 30,
+  vx: 0, vy: 0, speed: 5,
+  jumpPower: -12, isGrounded: false
+};
+
+let platforms = [];
+let coins = [];
+let score = 0;
+let gravity = 0.6;
+
+function setup() {
+  createCanvas(600, 400);
+
+  // Generate random platforms
+  for (let i = 0; i &lt; 5; i++) {
+    platforms.push({
+      x: random(0, width - 100),
+      y: random(100, height - 80),
+      w: random(80, 150),
+      h: 20
+    });
+  }
+  platforms.push({ x: 0, y: height - 20, w: width, h: 20 }); // floor
+
+  // Generate random coins
+  for (let i = 0; i &lt; 8; i++) {
+    coins.push({
+      x: random(50, width - 50),
+      y: random(50, height - 100),
+      size: 25,
+      collected: false
+    });
+  }
+}
+
+function handlePlayerInput() {
+  player.vx = 0;
+  if (keyIsDown(LEFT_ARROW))  player.vx = -player.speed;
+  if (keyIsDown(RIGHT_ARROW)) player.vx =  player.speed;
+  if (keyIsDown(UP_ARROW) && player.isGrounded) {
+    player.vy = player.jumpPower;
+    player.isGrounded = false;
+  }
+}
+
+function applyPhysics() {
+  player.vy += gravity;
+  player.x  += player.vx;
+  player.y  += player.vy;
+}
+
+function checkPlatformCollisions() {
+  player.isGrounded = false;
+  for (let p of platforms) {
+    if (player.x + player.w > p.x && player.x &lt; p.x + p.w &&
+        player.y + player.h > p.y && player.y &lt; p.y + p.h) {
+      if (player.vy > 0) {          // only snap when falling down
+        player.y = p.y - player.h;
+        player.vy = 0;
+        player.isGrounded = true;
+      }
+    }
+  }
+}
+
+function checkCoinCollections() {
+  for (let c of coins) {
+    if (!c.collected) {
+      let d = dist(player.x + player.w/2, player.y + player.h/2, c.x, c.y);
+      if (d &lt; player.w/2 + c.size/2) {
+        c.collected = true;
+        score += 10;
+      }
+    }
+  }
+}
+
+function draw() {
+  background(30);
+
+  handlePlayerInput();
+  applyPhysics();
+  checkPlatformCollisions();
+  checkCoinCollections();
+
+  // Draw player
+  fill(255, 200, 0);
+  rect(player.x, player.y, player.w, player.h);
+
+  // Draw platforms
+  fill(100);
+  noStroke();
+  for (let p of platforms) rect(p.x, p.y, p.w, p.h);
+
+  // Draw coins
+  fill(255, 215, 0);
+  for (let c of coins) {
+    if (!c.collected) ellipse(c.x, c.y, c.size);
+  }
+
+  // Score display
+  fill(255);
+  textSize(20);
+  textAlign(LEFT, TOP);
+  text("Score: " + score, 10, 10);
+}</pre>
+    </section>
+
+    <!-- ======================== FINAL GAME ======================== -->
+    <section class="topic-section">
+      <h2>Final p5.js Project — Duck BBreaker</h2>
+      <p>Duck BBreaker is my original culminating game built with p5.js. The player controls a duck horizontally at the bottom of the screen and launches a ring upward to smash rows of bricks — a take on the classic Breakout genre. I designed the duck and ring sprites myself in Adobe Illustrator and wrote the gameplay logic from scratch, using Gemini AI to help debug the boundary reflection math and get the initial file structure set up. The game features a title screen, speed settings (Slow / Medium / Fast), a lives system, a high-score tracker, and a game-over screen. Each game loop version (V1 → V3) added more polish: V1 was the basic collision system, V2 added the HUD and lives, and V3 added speed settings and responsive canvas sizing. The biggest design challenge was tuning the duck speed, ring speed, and brick layout so the game is actually beatable at Medium difficulty.</p>
+      <a href="GameFiles/index.html" target="_blank">
+        <img src="../images/GameTitle.png" alt="Duck BBreaker game cover — click to play" style="border-radius: 10px; max-width: 100%; cursor: pointer;">
+      </a>
+      <p style="margin-top: 0.5rem;"><a href="GameFiles/index.html" target="_blank">▶ Click the image to play Duck BBreaker</a></p>
+      <button class="copy-btn" onclick="copyCode('code-final', this)">Copy Code (V3 — Final)</button>
+      <pre id="code-final">// Duck BBreaker — Final Version (V3Main.js)
+// Full source: see GameFiles/Source/V3Main.js
+// Assets: duck.png, ring.png, font.ttf, SFX.wav (made by Rongfeng in Illustrator)
+// Fonts: https://fonts.google.com/specimen/Silkscreen
+// Sound: https://pixabay.com/sound-effects/film-special-effects-splash-effect-229315/
+// Gemini chat: https://gemini.google.com/share/49fec5262663
+
+let gameState = "title";
+let duck, ring;
+let tiles = [];
+let score = 0;
+let highScore = 0;
+let level = 1;
+let lives = 3;
+let isPaused = false;
+
+let currentSpeedSetting = "Medium";
+const speedConfigs = {
+  "Slow":   { ring: 5,   duckMax: 20, accel: 1.5 },
+  "Medium": { ring: 5.5, duckMax: 23, accel: 1.7 },
+  "Fast":   { ring: 8,   duckMax: 25, accel: 2.3 }
+};
+
+let duckImg, ringImg, myFont, breakSound;
+
+function preload() {
+  duckImg    = loadImage('assets/duck.png');
+  ringImg    = loadImage('assets/ring.png');
+  myFont     = loadFont('assets/font.ttf');
+  breakSound = loadSound('assets/SFX.wav');
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  let saved = localStorage.getItem("duckBreakerHighScore");
+  if (saved !== null) highScore = parseInt(saved);
+  applySpeedSettings();
+  initLevel();
+}
+
+function applySpeedSettings() {
+  let cfg = speedConfigs[currentSpeedSetting];
+  baseRingSpeed = cfg.ring;
+  maxDuckSpeed  = cfg.duckMax;
+  acceleration  = cfg.accel;
+}
+
+function draw() {
+  textFont(myFont);
+  if      (gameState === "title")    drawTitleScreen();
+  else if (gameState === "play")     runGame();
+  else if (gameState === "gameover") drawGameOverScreen();
+}
+
+// See V3Main.js for full implementation of initLevel(),
+// runGame(), drawTitleScreen(), drawGameOverScreen(),
+// collision detection, and input handling.</pre>
+    </section>
+
   </main>
 
+  <script>
+    function copyCode(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = "Copied!";
+        setTimeout(() => btn.textContent = "Copy Code", 1500);
+      });
+    }
+  </script>
   <script src="../script.js"></script>
 </body>
 </html>
-

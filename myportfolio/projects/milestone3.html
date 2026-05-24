@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Milestone 3 — Minesweeper Grid</title>
+  <style>
+    body { margin: 0; background: #1a1a2e; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+<script>
+let cols = 10;
+let rows = 10;
+let cellSize = 40;
+let grid = [];
+
+function setup() {
+  createCanvas(cols * cellSize, rows * cellSize);
+  document.oncontextmenu = function() { return false; };
+  initGrid();
+}
+
+function initGrid() {
+  grid = [];
+  for (let c = 0; c < cols; c++) {
+    grid[c] = [];
+    for (let r = 0; r < rows; r++) {
+      let isMine = random(1) < 0.1;
+      grid[c][r] = { x: c * cellSize, y: r * cellSize, mine: isMine, revealed: false, flagged: false };
+    }
+  }
+}
+
+function draw() {
+  for (let c = 0; c < cols; c++) {
+    for (let r = 0; r < rows; r++) {
+      let cell = grid[c][r];
+      stroke(0);
+
+      if (cell.revealed) {
+        fill(cell.mine ? color(255, 0, 0) : color(200));
+      } else if (cell.flagged) {
+        fill(255, 200, 0);
+      } else {
+        fill(100);
+      }
+      rect(cell.x, cell.y, cellSize, cellSize);
+
+      if (cell.flagged && !cell.revealed) {
+        fill(30);
+        noStroke();
+        textAlign(CENTER, CENTER);
+        textSize(18);
+        text("🚩", cell.x + cellSize / 2, cell.y + cellSize / 2);
+        stroke(0);
+      }
+      if (cell.revealed && cell.mine) {
+        fill(30);
+        noStroke();
+        textAlign(CENTER, CENTER);
+        textSize(18);
+        text("💣", cell.x + cellSize / 2, cell.y + cellSize / 2);
+        stroke(0);
+      }
+    }
+  }
+}
+
+function mousePressed() {
+  let c = floor(mouseX / cellSize);
+  let r = floor(mouseY / cellSize);
+  if (c >= 0 && c < cols && r >= 0 && r < rows) {
+    let cell = grid[c][r];
+    if (mouseButton === RIGHT) {
+      if (!cell.revealed) cell.flagged = !cell.flagged;
+    } else if (mouseButton === LEFT) {
+      if (!cell.flagged) cell.revealed = true;
+    }
+  }
+}
+</script>
+</body>
+</html>

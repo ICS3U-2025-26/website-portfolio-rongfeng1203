@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Milestone 1 — Bouncing Ball</title>
+  <style>
+    body { margin: 0; background: #28213c; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+<script>
+let radius = 50;
+let x = 200;
+let y = 200;
+let speedX = 2;
+let speedY = 2;
+let r = 208;
+let g = 0;
+let b = 120;
+
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(40);
+  fill(r, g, b);
+  noStroke();
+  ellipse(x, y, radius * 2);
+
+  x += speedX;
+  y += speedY;
+
+  if (x > width - radius || x < radius) speedX = -speedX;
+  if (y > height - radius || y < radius) speedY = -speedY;
+}
+
+function mousePressed() {
+  let d = dist(mouseX, mouseY, x, y);
+  if (d < radius) {
+    r = random(255);
+    g = random(255);
+    b = random(255);
+    speedX = -speedX;
+    speedY = -speedY;
+  }
+}
+</script>
+</body>
+</html>

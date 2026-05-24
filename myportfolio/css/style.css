@@ -8,7 +8,7 @@
 }/*chat gpt and w3 school helped me with changing fonts
 https://www.w3schools.com/css/css3_fonts.asp*/
 body { background-color: rgb(34, 44, 88);
-  color: rgba(117, 255, 43, 0.854);/*color of text*/
+  color: rgba(255, 160, 43, 0.854);/*color of text*/
   font-family: myFont;
   font-size: 20px}
   /*below is the font Cursor chose, I wanted something cooler
@@ -16,14 +16,9 @@ body { background-color: rgb(34, 44, 88);
 header {padding: 0.1rem }
 /*chat gpt helped me with moving the padding and also the animation*/
 header h1 {padding-left: 20px; font-size: 3rem; 
-  text-shadow: 0 0 6px rgba(135, 255, 43, 0.6), 
-  0 0 10px rgba(135, 255, 43, 0.4); }
-h2 {  
-  text-shadow: 0 0 4px rgba(135, 255, 43, 0.6), 
-  0 0 8px rgba(124, 255, 23, 0.4); }
-h3 {  
-  text-shadow: 0 0 3px rgba(135, 255, 43, 0.6), 
-  0 0 6px rgba(124, 255, 23, 0.4); }
+color: rgba(255, 181, 21, 0.954);}
+h2 { color: rgba(255, 181, 21, 0.954); }
+h3 { color: rgba(255, 181, 21, 0.954); }
 /*chat gpt helped me with adding glowing effect to h1 h2 h3*/
 
 /*Chat gpt helped me match the css style in safari with chrome*/
@@ -63,17 +58,17 @@ original code is below */
   flex-wrap: wrap;
   gap: .2rem;
   align-items: center;
-  background: rgb(115, 45, 255);/*color of the nav bar*/
-  border: 3px solid rgb(150, 255, 75);
+  background: rgba(183, 0, 255, 0.6);/*color of the nav bar*/
+  border: 3px solid rgb(255, 72, 0);
   border-radius: 10px;/* I want a thick glowing boarder*/
   padding: .5rem .75rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 0 12px rgb(135, 255, 43);/*glowing effect*/
+  box-shadow: 0 0 12px rgb(255, 181, 21);/*glowing effect*/
   max-width: 800px;  
   margin: 0 auto;
-  animation: fadeBackground 20s infinite alternate; /* animation looping for the color intensity */
+
 }
 
 /* Animation keyframes */
@@ -109,7 +104,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libe
 /* googled code for link colors 
 http://w3schools.com/css/css_link.asp*/
 a:link {
-  color: rgb(0, 255, 251);
+  color: rgb(255, 149, 0);
   background-color: transparent;
   text-decoration: none;
 }

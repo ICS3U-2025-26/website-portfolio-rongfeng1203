@@ -1,68 +1,100 @@
-<!--Cursor generated the template of this page, the links, class, sections and headers. 
-I changed the informations in the table to reflect my projects.
-
--->
+<!--Cursor generated the template of this page, the links, class, sections and headers.
+I changed the information in the table to reflect my projects.-->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>My Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/style.css"><!--referenceing css style sheet for consistent style-->
+  <link rel="stylesheet" href="../css/style.css"><!--referencing css style sheet for consistent style-->
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid rgba(255,160,43,0.35);
+      padding: 0.65rem 1rem;
+      text-align: left;
+    }
+    th {
+      background: rgba(183,0,255,0.3);
+      color: rgba(255,181,21,0.95);
+    }
+    tr:hover td {
+      background: rgba(183,0,255,0.12);
+    }
+    td a {
+      color: rgba(255,160,43,0.9);
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header><!--consistent header for navigation, same for all pages-->
-    <a href="index.html"><img class="site-logo" src="../images/icon.png" alt="crystal logo with my inital"></a>
+    <a href="../index.html"><img class="site-logo" src="../images/icon.png" alt="crystal logo with my initial"></a>
     <h1>My Projects</h1>
-<nav class="site-nav">
+    <nav class="site-nav">
       <a href="../index.html">Home</a>
       <a href="index.html">My Projects</a>
       <a href="../resources.html">Resources</a>
       <a href="../about.html">About Me</a>
       <a href="../gaming.html">Gaming Corner</a>
       <a href="https://github.com/rongfeng1203" target="_blank">Github</a>
+    </nav>
   </header>
-<br>
-<br>
+
+  <br>
   <main>
-    <table><!--this is the table, each section(tr) is a row-->
+    <h2>Unit Overview</h2>
+    <p>Here's everything I built throughout ICS3U. Click any row to visit that unit's page.</p>
+
+    <table><!--this is the table, each section (tr) is a row-->
       <thead>
         <tr>
-          <th>Project</th>
           <th>Unit</th>
+          <th>Project(s)</th>
           <th>Date</th>
-          <th>Languages/Tools</th>
+          <th>Languages / Tools</th>
           <th>Link</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Simon Says</td>
           <td>Unit 1</td>
-          <td>September - October </td>
-          <td>Pseudocode, Flowchart</td>
-          <td><a href="unit1.html">View</a></td>
+          <td>Intro to Programming, PC Build, PB&amp;J Pseudocode, Implementing Algorithms</td>
+          <td>September – October</td>
+          <td>Scratch, Pseudocode, Flowcharts</td>
+          <td><a href="unit1.html">View →</a></td>
         </tr>
         <tr>
-          <td>Portfolio</td>
           <td>Unit 2</td>
-          <td>October - November</td>
+          <td>Website Portfolio, JavaScript Pop-Up Quiz</td>
+          <td>October – November</td>
           <td>HTML, CSS, JavaScript</td>
-          <td><a href="unit2.html">View</a></td>
+          <td><a href="unit2.html">View →</a></td>
         </tr>
         <tr>
-          <td>TBD</td>
           <td>Unit 3</td>
-          <td>TBD</td>
+          <td>Python Concepts (5 topics), Mad Libs, Go Tabletop Game</td>
+          <td>November – February</td>
           <td>Python</td>
-          <td><a href="unit3.html">View</a></td>
+          <td><a href="unit3.html">View →</a></td>
         </tr>
         <tr>
-          <td>TBD</td>
           <td>Unit 4</td>
-          <td>TBD</td>
-          <td>TBD</td>
-          <td><a href="unit4.html">View</a></td>
+          <td>p5.js Milestones, Platformer Tutorial, Duck BBreaker (Final Game)</td>
+          <td>February – May</td>
+          <td>JavaScript, p5.js</td>
+          <td><a href="unit4.html">View →</a></td>
+        </tr>
+        <tr>
+          <td>Unit 5</td>
+          <td>BSS Aura Forum — Full-Stack Web App</td>
+          <td>May</td>
+          <td>Python, Flask, JavaScript, Gemini API</td>
+          <td><a href="https://bss-aura-forum-zeta.vercel.app/" target="_blank">View →</a></td>
         </tr>
       </tbody>
     </table>
@@ -71,4 +103,3 @@ I changed the informations in the table to reflect my projects.
   <script src="../script.js"></script>
 </body>
 </html>
-

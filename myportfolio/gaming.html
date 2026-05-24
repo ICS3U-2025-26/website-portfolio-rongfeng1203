@@ -1,6 +1,6 @@
 <!--Notes: Done! alt and header check completed-->
-<!--cursor generated basic structure, I added media content and js quiz.  
-Cursor helped me debug sound/video-->
+<!--cursor generated basic structure, I added media content and js quiz.
+Cursor helped me debug sound/video. Updated with Unit 4 games May 2025.-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,6 +8,31 @@ Cursor helped me debug sound/video-->
   <title>Gaming Corner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .game-card {
+      border: 2px solid rgba(255,160,43,0.35);
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin-bottom: 2.5rem;
+      background: rgba(0,0,0,0.25);
+    }
+    .how-to-play {
+      background: rgba(183,0,255,0.15);
+      border-left: 4px solid rgba(255,72,0,0.7);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.92em;
+    }
+    iframe {
+      border: 2px solid rgba(255,160,43,0.4);
+      border-radius: 10px;
+      width: 100%;
+      max-width: 520px;
+      display: block;
+      margin: 0.75rem 0;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -25,41 +50,75 @@ Cursor helped me debug sound/video-->
 
   <main>
     <br>
-    <h2>Brief Intro</h2>
-    <p>OGames from Units 1-4 will appear here. For now, click below for the JS Quiz, click the image to play Pentamania on Steam, or view the video demo of my other game Drillage!</p>
-    <br>
-    <br>
-    <a href="projects/GameFiles/index.html" target="_blank">
-      <img src="images/GameTitle.png" alt="BBreaker game cover image" style="border-radius: 10%;">
-    </a>
-    <br>
-    <a href="projects/quiz.html">JS Quiz</a>
-    <script src="script.js"></script>
-    <br>
-    <br>
-    <a href="https://store.steampowered.com/app/4033240/Pentamania_Alchemy_Madness/" target="_blank">
-      <img src="images/pentamania.png" alt="Pentamania game cover image" style="border-radius: 10%;">
-    </a>
-    <br>
-    <!--https://www.w3schools.com/html/html5_video.asp also cursor helped debugging-->
-    <video autoplay muted controls loop playsinline preload="auto" style="border-radius: 10%; max-width: 100%;">
-      <source src="images/Drillage.mov" type="video/quicktime" alt="Game demo video">
-      <source src="images/Drillage.mov" type="video/mp4" >
-    Your browser does not support the video tag.
-    </video>
+    <h2>Welcome to the Gaming Corner</h2>
+    <p>All the games I built in ICS3U live here — from Unit 4 p5.js projects to the JS Quiz. Click, play, and enjoy!</p>
 
-      <!--https://www.w3schools.com/html/html5_audio.asp also cursor helped debugging-->
+    <!-- ======================== DUCK BBREAKER ======================== -->
+    <div class="game-card">
+      <h2>Duck BBreaker — Final p5.js Game</h2>
+      <p>My original culminating game. Control the duck with your mouse, launch the ring upward, and smash every brick before the ring falls past you. Custom sprites made in Adobe Illustrator, original sound effect, and three speed settings.</p>
+      <a href="projects/GameFiles/index.html" target="_blank">
+        <img src="images/GameTitle.png" alt="Duck BBreaker game cover — click to play" style="border-radius: 10px; max-width: 100%; cursor: pointer;">
+      </a>
+      <div class="how-to-play">
+        <strong>How to Play:</strong> Move your mouse left and right to slide the duck. The ring launches automatically. Clear all the bricks to advance levels. You have 3 lives — don't let the ring fall below the duck! Choose your difficulty on the title screen: Slow / Medium / Fast.
+      </div>
+    </div>
+
+    <!-- ======================== CLICKER TUTORIAL GAME ======================== -->
+    <div class="game-card">
+      <h2>Clicker Game — Game Tutorial (p5.js)</h2>
+      <p>A 30-second reflex challenge built as part of the Unit 4 game tutorial. Click the moving circle as many times as you can before the timer hits zero.</p>
+      <iframe src="projects/milestone2.html" height="420" title="Clicker Game" scrolling="no"></iframe>
+      <div class="how-to-play">
+        <strong>How to Play:</strong> Click the blue circle — it jumps to a new random spot each time you hit it. Score as many clicks as possible in 30 seconds. Click anywhere on the game-over screen to restart and try to beat your score!
+      </div>
+    </div>
+
+    <!-- ======================== JS QUIZ ======================== -->
+    <div class="game-card">
+      <h2>JavaScript Pop-Up Quiz</h2>
+      <p>An interactive quiz built in Unit 2 using JavaScript popup boxes. Test your knowledge of basic web dev and CS concepts!</p>
+      <a href="projects/quiz.html">▶ Launch the JS Quiz</a>
+      <div class="how-to-play">
+        <strong>How to Play:</strong> Click the link above. Answer each question in the popup box that appears. Your final score is shown at the end.
+      </div>
+    </div>
+
+    <!-- ======================== PENTAMANIA ======================== -->
+    <div class="game-card">
+      <h2>Pentamania — On Steam</h2>
+      <p>A puzzle game I contributed to — available on Steam!</p>
+      <a href="https://store.steampowered.com/app/4033240/Pentamania_Alchemy_Madness/" target="_blank">
+        <img src="images/pentamania.png" alt="Pentamania game cover image" style="border-radius: 10px; max-width: 100%;">
+      </a>
+      <div class="how-to-play">
+        <strong>How to Play:</strong> Visit the Steam page to find out more and wishlist or purchase!
+      </div>
+    </div>
+
+    <!-- ======================== DRILLAGE ======================== -->
+    <div class="game-card">
+      <h2>Drillage — Demo</h2>
+      <p>A video demo of another game project I worked on.</p>
+      <!--https://www.w3schools.com/html/html5_video.asp also cursor helped debugging-->
+      <video autoplay muted controls loop playsinline preload="auto" style="border-radius: 10px; max-width: 100%;">
+        <source src="images/Drillage.mov" type="video/quicktime" alt="Drillage game demo video">
+        <source src="images/Drillage.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!--https://www.w3schools.com/html/html5_audio.asp also cursor helped debugging-->
     <audio id="backgroundAudio" controls preload="auto" loop style="margin: 10px;">
       <source src="images/rough theme idea.mp3" type="audio/mpeg">
       <source src="images/rough theme idea.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
+      Your browser does not support the audio element.
     </audio>
     <p>Theme made by @aaron.wang.2007 / collaborator of Pentamania</p>
-    
+
   </main>
 
-
-  
+  <script src="script.js"></script>
 </body>
 </html>
-
