@@ -236,6 +236,7 @@ function mousePressed() {
     <section class="topic-section">
       <h2>Game Tutorial — Platformer with Physics</h2>
       <p>This tutorial walked me through building a side-scrolling platformer from scratch using p5.js. I learned how to implement gravity by incrementing vertical velocity each frame, how to detect and resolve collisions between the player rectangle and platform rectangles, and how to use objects to store all the state for a player (<code>x</code>, <code>y</code>, <code>vx</code>, <code>vy</code>, <code>isGrounded</code>). I also added coin collection with a score counter, sound effects triggered on pickup, and randomly generated platforms for replayability. The biggest challenge was the collision resolution — snapping the player to the top of a platform only when falling downward, so that jumping through platforms from below still works correctly.</p>
+      <iframe src="tutorial-game.html" height="400" title="Platformer Tutorial Game" scrolling="no"></iframe>
       <button class="copy-btn" onclick="copyCode('code-tut', this)">Copy Code</button>
       <pre id="code-tut">// ---- Platformer Tutorial — Physics, Collisions, Coins ----
 
