@@ -1,4 +1,4 @@
-<!--idk what the hell cursor or chat gpt wrote for me--!>
+<!--idk what cursor or chat gpt wrote for me--!>
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
