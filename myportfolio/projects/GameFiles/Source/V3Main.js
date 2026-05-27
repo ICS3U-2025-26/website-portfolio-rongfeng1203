@@ -289,3 +289,10 @@ function drawGameOverScreen() {
   textSize(width * 0.02);
   text("Press R to Restart", width / 2, height / 2 + 130);
 }
+
+// Prevent Space and arrow keys from scrolling the page
+window.addEventListener("keydown", function(e) {
+  if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.code)) {
+    e.preventDefault();
+  }
+}, false);
