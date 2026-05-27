@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Unit 1 — Intro to CS &amp; Hardware</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .topic-section {
+      border-top: 2px solid rgba(255,160,43,0.3);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+    ol {
+      font-size: 1rem;
+      line-height: 1.8;
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!--Cursor generated the navbar for me and the structure of the written content.
+    I filled in the content and restructured the writeups.-->
+    <a href="../index.html"><img class="site-logo" src="../images/icon.png" alt="Crystal icon with R"></a>
+    <h1>Unit 1 — Intro to CS &amp; Hardware</h1>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="index.html">My Projects</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../about.html">About Me</a>
+      <a href="../gaming.html">Gaming Corner</a>
+      <a href="https://github.com/rongfeng1203" target="_blank">Github</a>
+    </nav>
+  </header>
+
+  <main>
+    <br>
+    <h2>Overview</h2>
+    <p>Unit 1 introduced the foundations of computer science: how hardware works, how algorithms are designed, and how to write your first programs. The four activities below walk through my learning from the start of the course.</p>
+
+    <!-- ======================== 01 INTRO TO PROGRAMMING ======================== -->
+    <section class="topic-section">
+      <h2>01 — Introduction to Programming</h2>
+      <p>The first coding activity in the course. I built programs in Scratch that drew shapes and patterns, using loops and basic control statements for the first time. I focused on making the colours change dynamically to keep the animation interesting. This was my first real experience seeing how a loop could do in three lines what would otherwise take hundreds. The screen recording below shows the Scratch project running.</p>
+      <video autoplay muted controls loop playsinline preload="auto" style="border-radius: 10px; max-width: 70%;">
+        <source src="../images/Homework.mov" type="video/quicktime">
+        <source src="../images/Homework.mov" type="video/mp4">
+        Your browser does not support the video tag.
+        <!--cursor helped debugging the video not running-->
+      </video>
+      <p>
+        <a href="https://scratch.mit.edu/projects/1213507961/" target="_blank">▶ View the interactive Scratch project</a>
+      </p>
+    </section>
+
+    <!-- ======================== PC BUILD ======================== -->
+    <section class="topic-section">
+      <h2>PC Build</h2>
+      <p>For this project I researched the core components of a computer — CPU, GPU, RAM, storage, motherboard, power supply — and built a parts list that could run Cyberpunk 2077 at a playable frame rate for the lowest possible cost. Going through each component taught me what each part actually does and how they communicate on a motherboard. The image below links to my full parts list on PCPartPicker.</p>
+      <a href="https://ca.pcpartpicker.com/list/WkCkNz" target="_blank">
+        <img src="../images/computer.png" alt="PC build parts list screenshot — click to open on PCPartPicker" style="border-radius: 6px; max-width: 80%;">
+      </a>
+    </section>
+
+    <!-- ======================== PB&J ======================== -->
+    <section class="topic-section">
+      <h2>Peanut Butter &amp; Jelly — Pseudocode Algorithm</h2>
+      <p>The goal of this activity was to write a precise step-by-step algorithm for making a PB&amp;J sandwich — detailed enough that someone with no prior knowledge (or a very literal robot) could follow it perfectly. I tried to describe every micro-action: which end of the knife to hold, how to wipe it clean before switching from jelly to peanut butter, and how to align the two slices before pressing them together. This exercise taught me that ambiguity in an algorithm causes bugs, and that being overly specific is always better than assuming context.</p>
+      <ol>
+        <li>Open the bag of bread from the opening end</li>
+        <li>Take out two pieces of bread from the bag and place them on the plate</li>
+        <li>Set the bag aside</li>
+        <li>Separate the two pieces of bread on the plate</li>
+        <li>Take the jelly jar and twist the lid until it opens</li>
+        <li>Set the lid aside</li>
+        <li>Hold the non-sharp end of the knife</li>
+        <li>Insert the sharp end of the knife into the jelly jar</li>
+        <li>Gather a spoonful of jelly on the blade</li>
+        <li>Move the knife over one slice of bread while keeping the jelly balanced</li>
+        <li>Tilt the knife so the jelly drops onto the bread</li>
+        <li>Spread the jelly evenly until 80% of the bread is covered</li>
+        <li>Lay the knife down beside the plate</li>
+        <li>Take the jelly jar lid</li>
+        <li>Align the lid with the jar opening and twist until closed</li>
+        <li>Take a tissue</li>
+        <li>Hold the knife by the non-sharp end</li>
+        <li>Wipe both sides of the blade clean with the tissue</li>
+        <li>Set the knife and tissue aside</li>
+        <li>Take the peanut butter jar and twist the lid until it opens</li>
+        <li>Set the lid aside</li>
+        <li>Hold the non-sharp end of the knife</li>
+        <li>Insert the sharp end into the peanut butter jar</li>
+        <li>Gather a spoonful of peanut butter on the blade</li>
+        <li>Move the knife over the second slice of bread while keeping the peanut butter balanced</li>
+        <li>Tilt the knife so the peanut butter drops onto the bread</li>
+        <li>Spread the peanut butter evenly until 80% of the bread is covered</li>
+        <li>Lay the knife down beside the plate</li>
+        <li>Take the peanut butter jar lid</li>
+        <li>Align the lid with the jar opening and twist until closed</li>
+        <li>Pick up the peanut-butter slice</li>
+        <li>Flip it and place it spread-side down on top of the jelly slice</li>
+      </ol>
+    </section>
+
+    <!-- ======================== IMPLEMENTING ALGORITHMS ======================== -->
+    <section class="topic-section">
+      <h2>05 — Implementing Algorithms</h2>
+      <p>This activity focused on translating algorithm logic into actual Scratch code — boolean conditions, loops, and variables. I kept my logic clean by giving each question its own set of variables rather than reusing names. The skills I practised here (conditional branching, loop control) directly helped me when I built the Simon Says project later in the unit. The screen recording below shows the final program running.</p>
+      <video autoplay muted controls loop playsinline preload="auto" style="border-radius: 10px; max-width: 70%;">
+        <source src="../images/HW2.mov" type="video/quicktime">
+        <source src="../images/HW2.mov" type="video/mp4">
+        Your browser does not support the video tag.
+        <!--cursor helped debugging the video not running-->
+      </video>
+      <p>
+        <a href="https://scratch.mit.edu/projects/1220531412/" target="_blank">▶ View the interactive Scratch project</a>
+      </p>
+    </section>
+
+    <!-- ======================== SIMON SAYS ======================== -->
+    <section class="topic-section">
+      <h2>Simon Says — Flowchart</h2>
+      <p>Simon Says was the culminating project for Unit 1. I designed the full game logic as a flowchart before coding it, which taught me the value of planning before writing a single line of code. The flowchart maps every possible state: waiting for input, checking if the sequence is correct, advancing to the next round, and triggering the game-over condition.</p>
+      <img src="../images/simonsays.png" alt="Simon Says game flowchart" style="border-radius: 6px; max-width: 100%;">
+    </section>
+
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

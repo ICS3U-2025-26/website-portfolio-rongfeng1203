@@ -1,0 +1,80 @@
+<!--Cursor generated the navbar for me and the structure of the written content.
+I filled in the content and made the writeup more structured.-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Unit 2 — Web Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .topic-section {
+      border-top: 2px solid rgba(255,160,43,0.3);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+    pre {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,160,43,0.4);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      color: #e0e0e0;
+      line-height: 1.5;
+    }
+    ul li { margin-bottom: 0.4rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html"><img class="site-logo" src="../images/icon.png" alt="personal crystal icon"></a>
+    <h1>Unit 2 — Web Development</h1>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="index.html">My Projects</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../about.html">About Me</a>
+      <a href="../gaming.html">Gaming Corner</a>
+      <a href="https://github.com/rongfeng1203" target="_blank">Github</a>
+    </nav>
+  </header>
+
+  <main>
+    <br>
+    <h2>Overview</h2>
+    <p>Unit 2 introduced the three core languages of the web: HTML for structure, CSS for style, and JavaScript for interactivity. The main deliverable was this portfolio website itself, built and iterated over several classes. I also completed a JavaScript quiz project that taught me conditionals and variables in JS.</p>
+
+    <!-- ======================== PORTFOLIO WEBSITE ======================== -->
+    <section class="topic-section">
+      <h2>Portfolio Website</h2>
+      <p>The portfolio site started as a plain HTML template and grew into a styled, multi-page site with a custom font, animated navigation bar, photo gallery, embedded video, audio, and a custom colour scheme I designed myself. The biggest challenge was getting consistent styling across Safari and Chrome — Cursor helped me track down the browser-specific CSS differences. I also learned how to use <code>position: sticky</code> for the nav bar and <code>@keyframes</code> for the background fade animation.</p>
+      <a href="class2.html" target="_blank">
+        <img src="../images/unit2.png" alt="Screenshot of Unit 2 portfolio webpage — click to open" style="border-radius: 6px; max-width: 70%;">
+      </a>
+      <p>Click the screenshot to open the Class 2 practice website, or browse my other practice pages below:</p>
+      <ul>
+        <li><a href="class1.html">Class 1 — First HTML page</a></li>
+        <li><a href="class2.html">Class 2 — Styled portfolio</a></li>
+        <li><a href="class3.html">Class 3 — Extended layout</a></li>
+        <li><a href="class4.html">Class 4 — Halloween quiz version</a></li>
+        <li><a href="https://github.com/ICS3U-2025-26/website-portfolio-rongfeng1203" target="_blank">GitHub Repository</a></li>
+      </ul>
+    </section>
+
+    <!-- ======================== JS QUIZ ======================== -->
+    <section class="topic-section">
+      <h2>JavaScript Pop-Up Quiz</h2>
+      <p>For this activity I built a multi-question quiz using JavaScript's three built-in popup types: <code>alert()</code> to display information, <code>prompt()</code> to collect a text answer, and <code>confirm()</code> for true/false questions. I used <code>if / else if / else</code> chains to check each answer and keep a running score, then displayed the final result at the end. The main thing I learned was how JavaScript variables work differently from Python — especially that <code>let</code> and <code>const</code> replace Python's simple assignment, and that browser JS runs entirely in the client without needing a terminal. I also used <code>console.log()</code> extensively to debug answers that weren't matching correctly.</p>
+      <a href="quiz.html" target="_blank">▶ Launch the JavaScript Quiz</a>
+      <br><br>
+      <p>Code snippet from the quiz:</p>
+      <img src="../images/Unit2Code.png" alt="JavaScript quiz code snippet" style="border-radius: 6px; max-width: 60%;">
+    </section>
+
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

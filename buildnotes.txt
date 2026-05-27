@@ -1,0 +1,72 @@
+total failure experience with chat gpt, had to revert code
+https://chatgpt.com/share/68f127d7-298c-8011-979e-f40b20b6cd29 
+https://chatgpt.com/share/68f127c0-cf20-8011-955e-cee177b8c46e
+
+talked to cursor and generated "my-app folder"
+it generated good code but can't add effect to stable website
+here's the chat : https://drive.google.com/file/d/178IemOOB9bH2_SXdmoWeyo4IbBd3mREE/view?usp=sharing
+------
+
+cursor helped me generate template for the new pages, https://drive.google.com/file/d/1NNXKJubzAASLxlTYOx8urb0XYWBDnH_g/view?usp=sharing 
+
+Scaffolded myportfolio Home page and planned structure (projects, resources, about, gaming, images, script.js).
+
+cursor helped with photo gallery, original attempt : https://www.w3schools.com/css/css_image_gallery.asp 
+ https://drive.google.com/file/d/1b5tOqkZebUW0SZR0Q46hS-Qqferznlcu/view?usp=sharing 
+
+googled code for link colors 
+http://w3schools.com/css/css_link.asp
+
+https://drive.google.com/file/d/187q53b6IfEM5IZfPPVkssgDjfxTjgEWr/view?usp=sharing 
+cursor helped with audio playing
+my original attempt was from https://www.w3schools.com/html/html5_audio.asp 
+
+https://drive.google.com/file/d/1SnpjSs-Zgn5bAphbnUhoDcFbC36gEdFe/view?usp=sharing
+cursor helped with video debugging 
+
+https://drive.google.com/file/d/1UgQNqruO_I02pwAdkdad_PpnqA-jxo8H/view?usp=sharing
+cursor made a ugly bar and I change the color scheme to make it more attractive.
+
+chatgpt helped me change to custom fonts with css, also w3schoo 
+https://www.w3schools.com/css/css3_fonts.asp 
+
+Downloaded audiowide font from https://fonts.google.com/specimen/Audiowide?categoryFilters=Feeling:%2FExpressive%2FFuturistic 
+
+Chat gpt helped me match the css style in safari with chrome
+
+All the chats with chatgpt is docked in this one:https://chatgpt.com/share/6916b01d-abd0-8011-9545-dc9c5692cf50 
+
+Images citations
+isock photo meme is from this link https://www.istockphoto.com/photos/troll-meme
+"Nice" meme from unit 2 class 1, is from this website https://www.amazon.ca/Content-Ultimate-Hilarious-Carving-Content-Aware/dp/B0CTHRGW2X
+All other content are either my photography, my art for games. Banner I made with illstruator
+Sound are made by @aaron.wang.2007
+
+------
+FINAL PORTFOLIO UPDATE — May 2025
+Used Claude (Anthropic's AI, claude-sonnet-4-6) via the Cowork desktop app to complete the final portfolio requirements for the ICS3U submission.
+
+What Claude helped with:
+- Read the project completion guide PDF and identified what was missing vs already done
+- Scanned my ICS3U folder and matched existing code files to each requirement automatically
+- Rebuilt unit3.html: added all 5 Python topic sections (Variables/IO, For Loops, If-Statements/While Loops, Strings/Lists, Custom Functions) using my actual code files from Intro-to-python/, and wrote the paragraph summaries for each
+- Created 3 standalone p5.js milestone HTML files (milestone1.html, milestone2.html, milestone3.html) using my sketch files from Game-dev-Animations/, so they run live in the browser via iframes
+- Rebuilt unit4.html: added all 3 milestones embedded + copyable code + summaries, the platformer tutorial as copyable code, and the Duck BBreaker final game section with a full design/process summary
+- Updated gaming.html: reorganised into game cards with "How to Play" instructions for Duck BBreaker, the Clicker Game (embedded via iframe), JS Quiz, Pentamania, and Drillage
+- Reformatted unit1.html and unit2.html to match the consistent section style of the new pages
+- Updated projects/index.html table with correct project names, dates, and tools for all 4 units
+- Added this build notes entry
+
+My role / what I did myself:
+- All the original code in every .py and .js file (Python lessons, Mad Libs, Go game, p5.js sketches, Duck BBreaker)
+- All original game assets (duck.png, ring.png made in Adobe Illustrator, SFX.wav)
+- All original photography and banner art
+- The original CSS colour scheme, font choice, and visual design of the portfolio
+- The JavaScript quiz questions and logic
+- Playtesting and difficulty tuning for Duck BBreaker
+- Reviewing and approving every page Claude generated before it was saved
+
+AI prompt used to start the session:
+"can you look thru the doc and summarize a list of things to add" (referring to the ICS3U completion guide PDF)
+Then: "you can check for the code files in the ics3u folder"
+Then: "can you update the my projects page and update unit1 and unit2 to align with current format. Also add a bit of build notes about using you to complete the portfolio"

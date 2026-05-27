@@ -1,0 +1,83 @@
+<!--this is code i wrote in class-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*this is an id selector and used for unique elements only once per page*/
+            #my-first-div {
+                background-color: rgba(0, 255, 251, 0.254);
+                color: rgb(0, 60, 151);
+                font-family: 'Courier New', Courier, monospace;
+                padding: 20px;
+                width: 50%;
+            }
+            /*this is a class selector applied to any elements in this class*/
+            
+            /*compound selector: makes the class specifc to one tag*/
+            p.special-text{
+                color: rgb(255, 213, 0);
+                background-color: rgba(0, 255, 255, 0.483);
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
+
+            }
+
+            .pretty-text {
+                color: rgba(103, 20, 211, 0.539);
+                background-color: rgba(43, 156, 226, 0.21);
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 50px;
+                font-weight: bold;
+            }
+
+            .special-text {
+                color: rgba(151, 35, 229, 0.325);
+                font-family: 'papyrus', sans-serif;
+                font-style: italic;
+                font-weight: bold;
+            }
+            /*TAG selector: targets all h1, h2 tags*/
+            h1, h2{
+                color: rgba(132, 0, 255, 0.55);
+                font-family: 'Arial', 'papyrus', sans-serif;
+            }
+            /*inline element style*/
+            span{
+                background-color: aquamarine;
+            }
+            div {
+                width: 300px;
+                border: 15px solid rgba(255, 39, 255, 0.363);
+                padding: 50px;
+                margin: 20px;
+                border-radius: 10px;
+                box-shadow: 10px 15px 10px rgba(22, 0, 134, 0.3);
+            }
+
+        </style>
+    </head>
+    <body style="background-color: #5bffe484; font-family: 'Courier New', 'papyrus';">
+            <h1>Welcome to RINA's PAGGGGEG</h1>
+            <h2 class="special-text">ID selectors & class selectors</h2>
+            <h3 style="color: rgb(33, 4, 83);">life is hard</h3>
+            <div id="my-first-div">
+                <p>this is paragraph 1</p>
+                <p>this is paragraph 2</p>
+                <p class="special-text">this is paragraph 3</p>
+            </div>
+            <br>
+            <div>
+                <!--span can format text in line.-->
+                <p>this is <span class="special-text">paragraph</span> 4</p>
+                <p class="special-text">this is paragraph 5</p>
+                <p>this is paragraph 6</p>
+            </div>
+            <br>
+            <div class ="pretty-text">
+                <p>hello world</p>
+                <p=>tung tung tung sahur</p>
+                <p>tung tung tung sahur</p>
+                <p>tung tung tung sahur</p>
+                <p>tung tung tung sahur</p>
+    </body>
+</html>

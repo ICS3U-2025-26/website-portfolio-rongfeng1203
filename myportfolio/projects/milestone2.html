@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Milestone 2 — Clicker Game</title>
+  <style>
+    body { margin: 0; background: #1e1e32; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
+<script>
+let target = { x: 200, y: 200, radius: 40 };
+let score = 0;
+let timeLeft = 30;
+let gameOver = false;
+
+function setup() {
+  createCanvas(500, 400);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  setInterval(function() {
+    if (!gameOver) {
+      timeLeft--;
+      if (timeLeft <= 0) gameOver = true;
+    }
+  }, 1000);
+}
+
+function draw() {
+  background(30, 30, 50);
+
+  fill(255);
+  textSize(28);
+  text("Click The Circle!", width / 2, 40);
+
+  textSize(20);
+  text("Score: " + score, width / 2, 70);
+  text("Time: " + timeLeft, width - 80, 40);
+
+  if (gameOver) {
+    fill(255, 100, 100);
+    textSize(40);
+    text("GAME OVER", width / 2, height / 2);
+    textSize(24);
+    text("Final Score: " + score, width / 2, height / 2 + 50);
+    text("Click to Restart", width / 2, height / 2 + 90);
+    return;
+  }
+
+  fill(100, 200, 255);
+  noStroke();
+  ellipse(target.x, target.y, target.radius * 2);
+}
+
+function mousePressed() {
+  if (gameOver) {
+    score = 0;
+    timeLeft = 30;
+    gameOver = false;
+    return;
+  }
+  let d = dist(mouseX, mouseY, target.x, target.y);
+  if (d < target.radius) {
+    score++;
+    target.x = random(target.radius, width - target.radius);
+    target.y = random(100, height - target.radius);
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platformer Tutorial</title>
+  <style>
+    body { margin: 0; background: #1e1e2e; display: flex; justify-content: center; align-items: flex-start; }
+    canvas { display: block; }
+  </style>
+  <script src="GameFiles/libraries/p5.min.js"></script>
+  <script src="GameFiles/libraries/p5.sound.min.js"></script>
+</head>
+<body>
+<script>
+// Platformer Tutorial — Physics, Platforms, Coins
+// Source: Game-dev-Animations/01-intro-to-p5.js (gamev2.js)
+// https://gemini.google.com/share/c68fb127ca99
+
+let coinSound, playerImage, bgImage, coinImage;
+let platforms = [];
+let coins = [];
+let score = 0;
+let gravity = 0.6;
+
+let player = {
+  x: 50, y: 50, w: 30, h: 30,
+  vx: 0, vy: 0, speed: 5,
+  jumpPower: -12, isGrounded: false
+};
+
+function preload() {
+  soundFormats('wav');
+  coinSound    = loadSound('tutorial-assets/coin.wav');
+  playerImage  = loadImage('tutorial-assets/player.png');
+  bgImage      = loadImage('tutorial-assets/background.png');
+  coinImage    = loadImage('tutorial-assets/coin.png');
+}
+
+function setup() {
+  createCanvas(600, 380);
+  spawnLevel();
+}
+
+function spawnLevel() {
+  platforms = [];
+  coins = [];
+
+  // 5 random floating platforms
+  for (let i = 0; i < 5; i++) {
+    platforms.push({
+      x: random(0, width - 100),
+      y: random(100, height - 80),
+      w: random(80, 150),
+      h: 20
+    });
+  }
+  // Always add a floor so the player doesn't fall forever
+  platforms.push({ x: 0, y: height - 20, w: width, h: 20 });
+
+  // 8 random coins
+  for (let i = 0; i < 8; i++) {
+    coins.push({
+      x: random(50, width - 50),
+      y: random(50, height - 100),
+      size: 25,
+      collected: false
+    });
+  }
+}
+
+function handlePlayerInput() {
+  player.vx = 0;
+  if (keyIsDown(LEFT_ARROW))  player.vx = -player.speed;
+  if (keyIsDown(RIGHT_ARROW)) player.vx =  player.speed;
+  if (keyIsDown(UP_ARROW) && player.isGrounded) {
+    player.vy = player.jumpPower;
+    player.isGrounded = false;
+  }
+}
+
+function applyPhysics() {
+  player.vy += gravity;
+  player.x  += player.vx;
+  player.y  += player.vy;
+  player.x = constrain(player.x, 0, width - player.w);
+  // Respawn if fallen off bottom
+  if (player.y > height + 50) {
+    player.x = 50; player.y = 50;
+    player.vx = 0; player.vy = 0;
+  }
+}
+
+function checkPlatformCollisions() {
+  player.isGrounded = false;
+  for (let p of platforms) {
+    if (player.x + player.w > p.x && player.x < p.x + p.w &&
+        player.y + player.h > p.y && player.y < p.y + p.h) {
+      if (player.vy > 0) {
+        player.y = p.y - player.h;
+        player.vy = 0;
+        player.isGrounded = true;
+      }
+    }
+  }
+}
+
+function checkCoinCollections() {
+  let remaining = 0;
+  for (let c of coins) {
+    if (!c.collected) {
+      let d = dist(player.x + player.w / 2, player.y + player.h / 2, c.x, c.y);
+      if (d < player.w / 2 + c.size / 2) {
+        c.collected = true;
+        score += 10;
+        if (coinSound && coinSound.isLoaded()) coinSound.play();
+      } else {
+        remaining++;
+      }
+    }
+  }
+  // All coins collected — spawn a new level
+  if (remaining === 0) spawnLevel();
+}
+
+function draw() {
+  // Background image
+  if (bgImage) {
+    image(bgImage, 0, 0, width, height);
+  } else {
+    background(30, 30, 50);
+  }
+
+  handlePlayerInput();
+  applyPhysics();
+  checkPlatformCollisions();
+  checkCoinCollections();
+
+  // Draw player
+  if (playerImage) {
+    image(playerImage, player.x, player.y, player.w, player.h);
+  } else {
+    fill(255, 200, 0); noStroke();
+    rect(player.x, player.y, player.w, player.h);
+  }
+
+  // Draw platforms
+  fill(100); noStroke();
+  for (let p of platforms) rect(p.x, p.y, p.w, p.h);
+
+  // Draw coins
+  for (let c of coins) {
+    if (!c.collected) {
+      if (coinImage) {
+        image(coinImage, c.x - c.size / 2, c.y - c.size / 2, c.size, c.size);
+      } else {
+        fill(255, 215, 0); noStroke();
+        ellipse(c.x, c.y, c.size);
+      }
+    }
+  }
+
+  // HUD
+  fill(255); noStroke();
+  textFont('Courier New');
+  textSize(18);
+  textAlign(LEFT, TOP);
+  text("Score: " + score, 10, 10);
+  fill(200);
+  textSize(12);
+  textAlign(CENTER, TOP);
+  text("← → move   ↑ jump   collect all coins to advance", width / 2, 12);
+}
+
+// Unlock audio context on first click (required by browsers)
+function mousePressed() {
+  if (getAudioContext().state !== 'running') userStartAudio();
+}
+</script>
+</body>
+</html>

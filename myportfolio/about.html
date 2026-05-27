@@ -1,0 +1,101 @@
+<!--Cursor generated the base struture, helped me debug the photogallery, sound and I filled in the content-->
+<!--Notes: Done! alt and header check completed-->
+<!doctype html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img class="site-logo" src="images/icon.png" alt="Site banner"></a>
+    <h1>About Me</h1>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="projects/index.html">My Projects</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About Me</a>
+      <a href="gaming.html">Gaming Corner</a>
+      <a href="https://github.com/rongfeng1203" target="_blank">Github</a>
+    </nav>
+  </header>
+
+  <main>
+    <br>
+    <h2>Biography</h2>
+    <p>Hi! I am Rina/冯熔. I'm a student interested in web development, game design, and art. I enjoy building interactive websites and learning new tools.</p>
+    <p>Outside of school, I like archery, theatre and photography.
+      Below is some lighting I coded for the upcoming school play Chicago.
+    </p>
+    <br>
+    <video autoplay muted controls loop playsinline preload="auto" style="border-radius: 10%; max-width: 100%;">
+      <source src="images/IMG_3306.mov" type="video/quicktime" >
+      <source src="images/IMG_3306.mov" type="video/mp4" >
+    Your browser does not support the video tag.
+    </video>
+    <section>
+      <h3>My Learning Journey</h3>
+      <ol>
+        <li>Started with coding in my summerschool at NHSGA, using c# and simple shaders</li>
+        <li>Learned Pseudocode and flowcharts</li>
+        <li>Built interactive website with html and java script</li>
+        <li>Created this portfolio website</li>
+      </ol>
+    </section>
+    <!--I used code from https://www.w3schools.com/css/css_image_gallery.asp also cursor helped debugging-->
+    <section class="photo-gallery">
+      <h2>Photo Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/IMG_4373.jpg" alt="a women standing in the snow" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4517.jpg" alt="mr.moffat and mr.hosein at bobcat games" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4548.jpg" alt="anne at bobcat games" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4565.jpg" alt="a person in orange at bobcat games" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4798.jpg" alt="someone pulling a rope at bobcat games" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4822.jpg" alt="women on her phone" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4846.jpg" alt="seaside building" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4852.jpg" alt="a man walking photo taken from birdeye view" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_2534.png" alt="me and meat" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4638.jpg" alt="a women back on the wall" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4701.jpg" alt="a women with children" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/IMG_4587.jpg" alt="bianca's hat" />
+      </div>
+    </section>
+       <!--I used code from https://www.w3schools.com/html/html5_audio.asp also cursor helped debugging-->
+       <audio id="backgroundAudio" controls preload="auto" loop style="margin: 10px;">
+        <source src="images/sound.mp3" type="audio/mpeg">
+        <source src="images/sound.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+      <p>Theme made by @aaron.wang.2007 / collaborator of Pentamania</p>
+      
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

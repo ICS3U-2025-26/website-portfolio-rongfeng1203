@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Unit 3 — Programming Concepts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    pre {
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,160,43,0.4);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      color: #e0e0e0;
+      line-height: 1.5;
+    }
+    .topic-section {
+      border-top: 2px solid rgba(255,160,43,0.3);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+    .copy-btn {
+      background: rgba(183,0,255,0.5);
+      border: 2px solid rgba(255,72,0,0.7);
+      border-radius: 6px;
+      color: rgba(255,160,43,0.9);
+      font-family: myFont, sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 4px 12px;
+      margin-bottom: 6px;
+    }
+    .copy-btn:hover { background: rgba(183,0,255,0.8); }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html"><img class="site-logo" src="../images/icon.png" alt="personal crystal icon"></a>
+    <h1>Unit 3 — Programming Concepts</h1>
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="index.html">My Projects</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../about.html">About Me</a>
+      <a href="../gaming.html">Gaming Corner</a>
+      <a href="https://github.com/rongfeng1203" target="_blank">Github</a>
+    </nav>
+  </header>
+
+  <main>
+    <br>
+    <h2>Overview</h2>
+    <p>Unit 3 covered the core programming concepts in Python: input/output, loops, conditionals, data structures, and custom functions. Each section below shows a code example I wrote and a short reflection on what I learned.</p>
+
+    <!-- ======================== TOPIC 1 ======================== -->
+    <section class="topic-section">
+      <h2>1 — Input, Output, and Variables</h2>
+      <p>In this topic I learned how Python handles user input and how to display output in different ways. The <code>input()</code> function always returns a string, so I had to use <code>int()</code> to convert it to a number when doing math. I also practised three different output formatting styles: string concatenation with <code>+</code>, the <code>.format()</code> method, and f-strings — which became my favourite because they keep the code readable and are easy to debug.</p>
+      <button class="copy-btn" onclick="copyCode('code1', this)">Copy Code</button>
+      <pre id="code1"># Input, Output, and Variables
+
+name = input("Enter your name: ")
+
+print("Hello, world!")
+print("Hello, " + name + "!")
+print("Ni hao", name, "!", sep="---")   # custom separator
+print("I love you", name)               # default comma separator
+
+# Control how a line ends (default is newline)
+print("This is the first part.", end="")
+print(" This is the second part.")
+
+# Take numeric input and compute age
+year = int(input("Enter your birth year: "))
+age = 2025 - year
+
+ageYoung = input("Enter your age: ")
+
+# f-string formatting
+print(f"{name} is {age} years old.")
+
+# str.format() method
+print("{} is {} years young.".format(name, ageYoung))</pre>
+    </section>
+
+    <!-- ======================== TOPIC 2 ======================== -->
+    <section class="topic-section">
+      <h2>2 — For Loops, Math, and Random Numbers</h2>
+      <p>This topic taught me how to use <code>for</code> loops with <code>range()</code> to repeat actions a set number of times. The three-argument form <code>range(start, stop, step)</code> was especially useful for counting backwards or skipping values. I also learned how to import and use the <code>random</code> module to generate unpredictable numbers — something that became essential when I built games later in the unit.</p>
+      <button class="copy-btn" onclick="copyCode('code2', this)">Copy Code</button>
+      <pre id="code2"># For Loops, Math, and Random Numbers
+
+# Number each line
+for i in range(10):
+    print(f"{i+1}. Hello")
+
+# Count down from 10 to 1
+for i in range(10, 0, -1):
+    print(i, end="...")
+print("Liftoff!")
+
+# Print a growing staircase of stars
+for i in range(6):
+    print("*" * (1 + i))
+
+# y = 4x - 6 for x from -5 to 5
+for x in range(-5, 6):
+    y = 4 * x - 6
+    print(f"When x={x}, y={y}")
+
+# ---- Random numbers ----
+from random import randint
+
+x = randint(1, 100)
+print(f"A random number from 1 to 100 is {x}")
+
+# Let the user choose the board size
+size = int(input("Enter the size of the square board: "))
+col = randint(1, size)
+row = randint(1, size)
+print(f"A random position on the board: ({col}, {row})")</pre>
+    </section>
+
+    <!-- ======================== TOPIC 3 ======================== -->
+    <section class="topic-section">
+      <h2>3 — If-Statements and While Loops</h2>
+      <p>Conditionals and loops are the backbone of interactive programs. I learned to build branching logic with <code>if / elif / else</code> chains and to keep a program running until a condition is met using <code>while</code>. A key insight was combining both: the while loop keeps the game going, and if-statements inside it give the player feedback each guess. I also learned to track a "chances" counter to add a win/lose state.</p>
+      <button class="copy-btn" onclick="copyCode('code3', this)">Copy Code</button>
+      <pre id="code3"># If-Statements and While Loops
+
+from random import randint
+
+# ---- If-statement: grade calculator ----
+grade = int(input("Enter a grade as a percentage: "))
+if grade >= 80:
+    print("A")
+elif grade >= 70:
+    print("B")
+elif grade >= 60:
+    print("C")
+elif grade >= 50:
+    print("D")
+else:
+    print("F")
+
+# ---- While loop: number guessing game ----
+guess = int(input("Guess a number from 1 to 100: "))
+answer = randint(1, 100)
+chances = 6
+
+if guess == answer:
+    print("Congratulations! You guessed it right on the first try!")
+while guess != answer and chances > 0:
+    if guess < answer:
+        print(f"Too low! You have {chances} guess(es) left.")
+    else:
+        print(f"Too high! You have {chances} guess(es) left.")
+    guess = int(input("Try again: "))
+    chances -= 1
+
+if guess == answer:
+    print(f"Correct! The number was {answer}.")
+else:
+    print(f"Out of guesses. The number was {answer}.")</pre>
+    </section>
+
+    <!-- ======================== TOPIC 4 ======================== -->
+    <section class="topic-section">
+      <h2>4 — Strings and Lists</h2>
+      <p>Strings and lists are Python's two most-used data containers. For strings I practised slicing, chaining methods like <code>.replace()</code> and <code>.upper()</code>, and searching with the <code>in</code> keyword. For lists I worked through all the common operations: <code>append</code>, <code>insert</code>, <code>sort</code>, <code>pop</code>, <code>remove</code>, and list comprehensions. One of the most useful tricks was <code>"-".join(list)</code> to turn a list back into a formatted string.</p>
+      <button class="copy-btn" onclick="copyCode('code4', this)">Copy Code</button>
+      <pre id="code4"># Strings and Lists
+
+# ---- String operations ----
+s = "Spongebob Squarepants"
+print(s.replace("a", "1").replace("pi", "po").upper())  # chained methods
+new_s = s[:6] + (s[6] + s[13:15]) * 2 + s[-4] + s[9:]  # slicing
+print(new_s)
+
+# ---- List operations ----
+l = ["A", "X", "B", "X", "C", "X"]
+print("original:", l)
+
+l.append("D")           # add to end
+l.insert(2, "Y")        # insert at index 2
+l.sort()                # sort alphabetically
+l.pop(2)                # remove item at index 2
+l.remove("X")           # remove first "X"
+l[3] = "Z"              # change item at index 3
+del l[0]                # delete item at index 0
+
+joined = "-".join(l)    # list -> string with hyphen separator
+print("joined:", joined)
+
+# List comprehension: uppercase letters A-Z
+alphabet = [chr(i) for i in range(65, 91)]
+print("alphabet:", alphabet)
+
+# Convert character to ASCII and back
+n = ord('A')
+c = chr(66)
+print(f"ord('A') = {n},  chr(66) = '{c}'")</pre>
+    </section>
+
+    <!-- ======================== TOPIC 5 ======================== -->
+    <section class="topic-section">
+      <h2>5 — Custom Functions</h2>
+      <p>Custom functions let you wrap reusable logic into a named block and call it whenever needed. I learned the difference between functions that only print (no return value), functions that take parameters, and functions that compute and return a result. The most interesting example was <code>roll_die()</code>, which returns a list of two random numbers — showing that a function can return any data type. Defining a menu with multiple mini-game functions showed me how larger programs are organized into modular pieces.</p>
+      <button class="copy-btn" onclick="copyCode('code5', this)">Copy Code</button>
+      <pre id="code5"># Custom Functions
+
+import random
+
+# Function with parameter, no return value
+def greet_user(name):
+    print(f"Hello, {name}! Nice to meet you.")
+
+greet_user("Rongfeng")
+greet_user("Valerie")
+
+# Function with parameters + return value
+def calculate_area(length, width):
+    return length * width
+
+length = int(input("Length: "))
+width  = int(input("Width: "))
+print(f"Area = {calculate_area(length, width)}")
+
+# Returns a boolean
+def check_age(age):
+    return age >= 16
+
+age = int(input("Enter your age: "))
+print("You can drive." if check_age(age) else "You cannot drive.")
+
+# No parameter, returns a list
+def roll_die():
+    a = random.randint(1, 6)
+    b = random.randint(1, 6)
+    return [a, b]
+
+result = roll_die()
+print(f"Dice roll: {result[0]} and {result[1]}")
+print(f"Sum: {sum(result)}")
+
+# Mini higher-lower game
+def higher_lower():
+    number = random.randint(1, 100)
+    guess = None
+    while guess != number:
+        guess = int(input("Guess a number between 1 and 100: "))
+        if guess < number:
+            print("Higher!")
+        elif guess > number:
+            print("Lower!")
+        else:
+            print("Correct!")
+
+higher_lower()</pre>
+    </section>
+
+    <!-- ======================== PROJECTS ======================== -->
+    <section class="topic-section">
+      <h2>Mad Libs Project</h2>
+      <p>The Mad Libs project combined input/output, strings, and functions into a full interactive program. The user enters random words and the program slots them into a pre-written story to produce a funny result. The video below shows the code and a sample run.</p>
+      <video autoplay muted controls loop playsinline preload="auto" style="border-radius: 10px; max-width: 100%;">
+        <source src="../images/Madlib.mov" type="video/quicktime">
+        <source src="../images/Madlib.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section class="topic-section">
+      <h2>Table Top Game — Go</h2>
+      <p>For the tabletop game project I implemented the board game Go in Python. The program tracks two players, handles stone placement, and checks for basic captures using nested lists. The video below shows the code and a live game session.</p>
+      <video autoplay muted controls loop playsinline preload="auto" style="border-radius: 10px; max-width: 100%;">
+        <source src="../images/Gogame.mov" type="video/quicktime">
+        <source src="../images/Gogame.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+  </main>
+
+  <script>
+    function copyCode(id, btn) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = "Copied!";
+        setTimeout(() => btn.textContent = "Copy Code", 1500);
+      });
+    }
+  </script>
+  <script src="../script.js"></script>
+</body>
+</html>
