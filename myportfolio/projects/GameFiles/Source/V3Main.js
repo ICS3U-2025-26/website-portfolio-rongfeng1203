@@ -39,10 +39,10 @@ let acceleration = 2;
 let duckImg, ringImg, myFont, breakSound;
 
 function preload() {
-  duckImg = loadImage('assets/duck.png');
-  ringImg = loadImage('assets/ring.png');
-  myFont = loadFont('assets/font.ttf');
-  breakSound = loadSound('assets/SFX.wav'); // Load the sound effect
+  duckImg = loadImage('Assets/duck.png');
+  ringImg = loadImage('Assets/ring.png');
+  myFont = loadFont('Assets/Font.ttf');
+  breakSound = loadSound('Assets/SFX.wav');
 }
 
 function setup() {
